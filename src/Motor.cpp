@@ -7,7 +7,6 @@ Motor::Motor()
 {
     this->renderizado = nullptr;
     this->ventana = nullptr;
-    this->superficie = nullptr;
     SDL_zero(this->eventos);
     this->estado = 0;
     this->lastTime = SDL_GetTicks();
@@ -25,8 +24,7 @@ Motor::~Motor()
 
 void Motor::destruirSDL()
 {
-    SDL_DestroySurface(this->superficie);
-    SDL_DestroyRenderer(this->renderizado);
+    SDL_DestroyRenderer(renderizado);
     SDL_DestroyWindow(this->ventana);
 }
 
@@ -43,28 +41,53 @@ void Motor::manejarEventos()
 
 void Motor::limpiarPantalla()
 {
-    this->superficie = SDL_GetWindowSurface(ventana);
-    SDL_SetRenderDrawColor(renderizado, 63, 63, 63, 0);
+    SDL_SetRenderDrawColor(renderizado, 255, 255, 255, 255);
     SDL_RenderClear(renderizado);
-    SDL_GetRenderOutputSize(renderizado, &this->anchoPantalla, &this->altoPantalla);
-    
+
     setDeltatime();
-    dibujarGrid();
+    limpiarColorBuffer(0xFF000000);
+
+    // dibujarGrid(0xFF00FFFF);
 }
 
 void Motor::actualizarPantalla(int ms)
 {
-    SDL_UpdateWindowSurface(ventana);
-    SDL_SetRenderVSync(renderizado, false);
-    SDL_SetRenderClipRect(renderizado, NULL);
-    SDL_RenderPresent(renderizado);
+    renderColorBuffer();
 
+    SDL_RenderPresent(renderizado);
     SDL_Delay(ms);
+}
+
+void Motor::dibujarPixel(int x, int y, unsigned int color)
+{
+    if (x >= 0 && x < ANCHOPANTALLA && y >= 0 && y < ALTOPANTALLA){
+        colorBuffer[(ANCHOPANTALLA * y) + x] = 0xFF00FFFF;
+    }
+}
+
+/**
+ * Funciones de renderizado
+*/
+void Motor::Configuracion()
+{
+    cubo = Cubo(this, 7);
+    cubo.SetRotacion(0.01, 0.01, 0.01);
+}
+
+void Motor::Actualizar()
+{
+    cubo.Actualizar(deltaTime);
+}
+
+void Motor::Renderizar()
+{   
+    cubo.Renderizar();
 }
 
 /**
  * Funciones privadas
 */
+
 int Motor::iniciarSDL()
 {
     SDL_InitFlags banderasInicio = SDL_INIT_VIDEO;
@@ -78,6 +101,10 @@ int Motor::iniciarSDL()
         return 1;
     }
     this->estado = 1;
+
+    colorBuffer = static_cast<uint32_t*>(malloc(sizeof(uint32_t) * ANCHOPANTALLA * ALTOPANTALLA));
+    colorBufferTextura = SDL_CreateTexture(renderizado, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, ANCHOPANTALLA, ALTOPANTALLA);
+
     return 0;
 }
 
@@ -88,14 +115,26 @@ void Motor::setDeltatime(void)
     lastTime = currentTime;
 }
 
-void Motor::dibujarGrid()
+void Motor::renderColorBuffer()
 {
-    int intervalo = 50;
-    for(int x = 0; x < anchoPantalla; x += intervalo){
-        for(int y = 0; y < altoPantalla; y += intervalo){
-            SDL_SetRenderDrawColor(renderizado, 90, 90, 90, 0);
-            SDL_RenderLine(renderizado, x, 0, x, altoPantalla);
-            SDL_RenderLine(renderizado, 0, y, anchoPantalla, y);
+    SDL_UpdateTexture(colorBufferTextura, NULL, colorBuffer, ANCHOPANTALLA * sizeof(uint32_t));
+    SDL_RenderTexture(renderizado, colorBufferTextura, NULL, NULL);
+}
+
+void Motor::limpiarColorBuffer(uint32_t color)
+{
+    for(size_t y = 0; y < ALTOPANTALLA; y++){
+        for(uint32_t x = 0; x < ANCHOPANTALLA; x++){
+            colorBuffer[(ANCHOPANTALLA * y) + x] = color;
+        }
+    }
+}
+
+void Motor::dibujarGrid(uint32_t color)
+{
+    for(size_t y = 0; y < ALTOPANTALLA; y += 10){
+        for(uint32_t x = 0; x < ANCHOPANTALLA; x += 10){
+            colorBuffer[(ANCHOPANTALLA * y) + x] = color;
         }
     }
 }

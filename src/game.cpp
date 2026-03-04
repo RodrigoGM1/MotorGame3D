@@ -1,35 +1,23 @@
-#include <math.h>
+#define SDL_PLATFORM_PSP 1
 
 #include "include/Motor.h"
+#include <SDL3/SDL_main.h>
 
-Motor motor;
-
-void dibujarPxieles(void);
-
-int main()
+int main(int argc, char *argv[])
 {
+    Motor motor;
+
+    motor.Configuracion();
 
     while(motor.estado){
         motor.manejarEventos();
         motor.limpiarPantalla();
 
-        dibujarPxieles();
+        motor.Actualizar();
+        motor.Renderizar();
 
         motor.actualizarPantalla(16);
     }
     motor.destruirSDL();
     return 0;
-}
-
-void dibujarPxieles(void)
-{
-    // int numPixel = motor.superficie->w * motor.superficie->h;
-    Uint32* pixele = (Uint32*)motor.superficie->pixels;
-    // for(int i = 0; i < numPixel; i++){
-    //     pixeles[i] = (Uint32) rand();
-    // }
-    SDL_PixelFormat* format = SDL_GetWindowPixelFormat(motor.ventana);
-    pixele += 10 * motor.superficie->w + 10;
-
-
 }

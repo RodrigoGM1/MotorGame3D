@@ -4,25 +4,37 @@
 #include <iostream>
 #include <SDL3/SDL.h>
 
-#define ANCHOPANTALLA 900
-#define ALTOPANTALLA  600
+#include "Vector.h"
+#include "Cubo.h"
+
+#ifdef SDL_PLATFORM_PSP
+    #define ANCHOPANTALLA 480
+    #define ALTOPANTALLA  272
+#else
+    #define ANCHOPANTALLA 900
+    #define ALTOPANTALLA  600
+#endif
 
 using namespace std;
 
 class Motor
 {
 public:
-    /* Variables */
+    /* Variables */    
     SDL_Renderer* renderizado;
     SDL_Window* ventana;
-    SDL_Surface* superficie;
     SDL_Event eventos;
     int estado;
 
     unsigned int lastTime = 0, currentTime;
     float deltaTime;
-    int anchoPantalla, altoPantalla;
     
+    uint32_t* colorBuffer;
+    SDL_Texture* colorBufferTextura;
+
+    float fovFactor = 200;
+    Vector3 camaraPosision{0, 0, -5};
+
     /* Funciones */
     Motor();
     ~Motor();
@@ -32,11 +44,24 @@ public:
     void limpiarPantalla();
     void actualizarPantalla(int ms);
 
+    void dibujarPixel(int x, int y, unsigned int color);
+
+    /**
+     * Funciones de renderizado
+    */
+    Cubo cubo;
+
+    void Configuracion();
+    void Actualizar();
+    void Renderizar();
+
 private:
     int iniciarSDL(void);
     void setDeltatime(void);
 
-    void dibujarGrid();
+    void renderColorBuffer();
+    void limpiarColorBuffer(uint32_t color);
+    void dibujarGrid(uint32_t color);
 };
 
 #endif /* MOTOR_H */
