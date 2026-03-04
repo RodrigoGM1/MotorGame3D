@@ -261,4 +261,5 @@ CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_tray.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_version.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_oldnames.h \
- /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h

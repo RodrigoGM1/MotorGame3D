@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj.d"
   "CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj"
   "CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj.d"
+  "CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj"
+  "CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj.d"
   "CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj"
   "CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj.d"
   "CMakeFiles/MotorGame3D.dir/src/game.cpp.obj"

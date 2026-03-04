@@ -6,6 +6,7 @@
 
 #include "Vector.h"
 #include "Cubo.h"
+#include "Triangulo.h"
 
 #ifdef SDL_PLATFORM_PSP
     #define ANCHOPANTALLA 480
@@ -49,7 +50,7 @@ public:
     /**
      * Funciones de renderizado
     */
-    Cubo cubo;
+    // Cubo cubo;
 
     void Configuracion();
     void Actualizar();

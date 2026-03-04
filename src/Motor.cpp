@@ -68,20 +68,84 @@ void Motor::dibujarPixel(int x, int y, unsigned int color)
 /**
  * Funciones de renderizado
 */
+Vector3 vertices[8] = {
+    {-1, -1, -1},  // 0
+    { 1, -1, -1},  // 1
+    {-1,  1, -1},  // 2
+    { 1,  1, -1},  // 3
+    {-1, -1,  1},  // 4
+    { 1, -1,  1},  // 5
+    {-1,  1,  1},  // 6
+    { 1,  1,  1}   // 7
+};
+
+Vector3 faces[12] = {
+    // front    ->
+    {1, 0, 2},
+    {1, 2, 3},
+    // back     <-
+    {4, 5, 7},
+    {4, 7, 6},
+    // right    ->
+    {1, 7, 5},
+    {1, 3, 7},
+    // left     <-
+    {4, 2, 0}, 
+    {4, 6, 2},
+    // top      ->
+    {2, 7, 3}, 
+    {2, 6, 7},
+    // bottom   <- 
+    {1, 5, 4}, 
+    {1, 4, 0} 
+};
+Vector3 rotacion;
+Triangulo trianguloRenderizado[12];
+
 void Motor::Configuracion()
 {
-    cubo = Cubo(this, 7);
-    cubo.SetRotacion(0.01, 0.01, 0.01);
+    // cubo = Cubo(this, 7);
+    // cubo.SetRotacion(0.01, 0.01, 0.01);
 }
 
 void Motor::Actualizar()
 {
-    cubo.Actualizar(deltaTime);
+    rotacion.x += 0.01 * deltaTime;
+    rotacion.y += 0.01 * deltaTime;
+    rotacion.z += 0.01 * deltaTime;
+
+    for(int i = 0; i < 12; i++){
+        Triangulo triangulo;
+        triangulo.vertices[0] = vertices[static_cast<int>(faces[i].x)];
+        triangulo.vertices[1] = vertices[static_cast<int>(faces[i].y)];
+        triangulo.vertices[2] = vertices[static_cast<int>(faces[i].z)];
+
+        for(int j = 0; j < 3; j++){
+            triangulo.RotacionVertice(j, rotacion);
+            triangulo.TrasladarVertice(j, camaraPosision);
+
+            triangulo.ProyecionVertice(j, fovFactor);
+
+            triangulo.proyecionVertices[j].x += (ANCHOPANTALLA / 2);
+            triangulo.proyecionVertices[j].y += (ALTOPANTALLA / 2);
+        }
+        trianguloRenderizado[i] = triangulo;
+    }
+    // cubo.Actualizar(deltaTime);
 }
 
 void Motor::Renderizar()
-{   
-    cubo.Renderizar();
+{
+    // cubo.Renderizar();
+    for(int i = 0; i < 12; i++){
+        for(int j = 0; j < 3; j++){
+            dibujarPixel(
+                trianguloRenderizado[i].proyecionVertices[j].x,
+                trianguloRenderizado[i].proyecionVertices[j].y,
+                0xFF00FFFF
+            );
+        }
+    }
 }
 
 /**
