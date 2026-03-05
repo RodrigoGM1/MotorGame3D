@@ -47,6 +47,7 @@ void Cubo::Actualizar(float deltaTime)
 
 void Cubo::Renderizar()
 {
+    /*
     for(size_t i = 0; i < conteoPuntos; i++){
         motor->dibujarPixel(
             proyecionPuntos[i].x + ANCHOPANTALLA / 2,
@@ -54,4 +55,5 @@ void Cubo::Renderizar()
             0xFF00FFFF
         );
     }
+    */
 }

@@ -262,4 +262,8 @@ CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_version.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_oldnames.h \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h \
- /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/deque \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_deque.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/deque.tcc

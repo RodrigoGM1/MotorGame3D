@@ -7,6 +7,7 @@
 #include "Vector.h"
 #include "Cubo.h"
 #include "Triangulo.h"
+#include "Malla.h"
 
 #ifdef SDL_PLATFORM_PSP
     #define ANCHOPANTALLA 480
@@ -46,11 +47,14 @@ public:
     void actualizarPantalla(int ms);
 
     void dibujarPixel(int x, int y, unsigned int color);
+    void dibujarLinea(int x0, int y0, int x1, int y1, unsigned int color);
+    void dibujarTriangulo(int x0, int y0, int x1, int y1, int x2, int y2, unsigned int color);
 
     /**
      * Funciones de renderizado
     */
     // Cubo cubo;
+    Malla malla;
 
     void Configuracion();
     void Actualizar();

@@ -7,6 +7,7 @@ add_executable(${PROJECT_NAME} src/game.cpp
 							   src/Vector.cpp
 							   src/Cubo.cpp
 							   src/Triangulo.cpp
+							   src/Malla.cpp
 				)
 
 include(FindPkgConfig)

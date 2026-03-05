@@ -4,6 +4,7 @@
 CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Cubo.cpp \
   /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h \
   /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h \
   /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h \
   /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/limits.h \
   /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h \
@@ -264,6 +265,7 @@ CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj: /home/rodrigo/Documentos/Repositori
 CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Motor.cpp \
   /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h \
   /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h \
   /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h \
   /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/limits.h \
   /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h \
@@ -651,6 +653,7 @@ CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj: /home/rodrigo/Documentos/Reposito
 CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/game.cpp \
   /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h \
   /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h \
   /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h \
   /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/limits.h \
   /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h \
@@ -921,10 +924,6 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 
 /home/rodrigo/pspdev/psp/include/wchar.h:
 
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_construct.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_scancode.h:
-
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_close_code.h:
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/hypergeometric.tcc:
@@ -1087,6 +1086,10 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 
 /home/rodrigo/pspdev/psp/include/bits/posix_opt.h:
 
+/home/rodrigo/pspdev/psp/include/time.h:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_pair.h:
+
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_camera.h:
 
 /home/rodrigo/pspdev/psp/include/_ansi.h:
@@ -1121,6 +1124,36 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 
 /home/rodrigo/pspdev/psp/include/machine/setjmp.h:
 
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_time.h:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/functexcept.h:
+
+/home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/syslimits.h:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_begin_code.h:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_atomic.h:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_endian.h:
+
+/home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/limits.h:
+
+/home/rodrigo/pspdev/psp/include/stdint.h:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/ios:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/localefwd.h:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_render.h:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_locale.h:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdlib:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_main_impl.h:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_process.h:
+
 /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h:
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_laguerre.tcc:
@@ -1143,35 +1176,7 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/beta_function.tcc:
 
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_endian.h:
-
-/home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/limits.h:
-
-/home/rodrigo/pspdev/psp/include/stdint.h:
-
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/ios:
-
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/localefwd.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_render.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_locale.h:
-
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdlib:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_main_impl.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_process.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_time.h:
-
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/functexcept.h:
-
-/home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/syslimits.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_begin_code.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_atomic.h:
+/home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h:
 
 /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdint.h:
 
@@ -1188,8 +1193,6 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/atomicity.h:
 
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_properties.h:
-
-/home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h:
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/specfun.h:
 
@@ -1208,6 +1211,10 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_mouse.h:
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/initializer_list:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_scancode.h:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_construct.h:
 
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_bits.h:
 
@@ -1438,7 +1445,3 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 /home/rodrigo/pspdev/psp/include/sys/syslimits.h:
 
 /home/rodrigo/pspdev/psp/include/sys/timeb.h:
-
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_pair.h:
-
-/home/rodrigo/pspdev/psp/include/time.h:

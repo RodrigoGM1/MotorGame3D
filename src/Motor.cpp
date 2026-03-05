@@ -41,7 +41,7 @@ void Motor::manejarEventos()
 
 void Motor::limpiarPantalla()
 {
-    SDL_SetRenderDrawColor(renderizado, 255, 255, 255, 255);
+    SDL_SetRenderDrawColor(renderizado, 0, 0, 0, 0);
     SDL_RenderClear(renderizado);
 
     setDeltatime();
@@ -63,6 +63,32 @@ void Motor::dibujarPixel(int x, int y, unsigned int color)
     if (x >= 0 && x < ANCHOPANTALLA && y >= 0 && y < ALTOPANTALLA){
         colorBuffer[(ANCHOPANTALLA * y) + x] = 0xFF00FFFF;
     }
+}
+
+void Motor::dibujarLinea(int x0, int y0, int x1, int y1, unsigned int color)
+{
+    float dX = x1 - x0;
+    float dY = y1 - y0;
+
+    int longuitud = abs(dY / dX) < 1 ? abs(dX) : abs(dY);
+
+    float xInc = dX / longuitud;
+    float yInc = dY / longuitud;
+
+    for(int i = 0; i < longuitud; i++){
+        dibujarPixel(
+            round(x0 + (xInc * i)),
+            round(y0 + (yInc * i)),
+            color
+        );
+    }
+}
+
+void Motor::dibujarTriangulo(int x0, int y0, int x1, int y1, int x2, int y2, unsigned int color)
+{
+    dibujarLinea(x0, y0, x1, y1, color);
+    dibujarLinea(x1, y1, x2, y2, color);
+    dibujarLinea(x2, y2, x0, y0, color);
 }
 
 /**
@@ -104,48 +130,53 @@ Triangulo trianguloRenderizado[12];
 
 void Motor::Configuracion()
 {
-    // cubo = Cubo(this, 7);
-    // cubo.SetRotacion(0.01, 0.01, 0.01);
+    malla = Malla(this, vertices, 8, faces, 12);
+    malla.SetRotacion(0.01, 0.01, 0.01);
 }
 
 void Motor::Actualizar()
 {
-    rotacion.x += 0.01 * deltaTime;
-    rotacion.y += 0.01 * deltaTime;
-    rotacion.z += 0.01 * deltaTime;
+    // rotacion.x += 0.01 * deltaTime;
+    // rotacion.y += 0.01 * deltaTime;
+    // rotacion.z += 0.01 * deltaTime;
 
-    for(int i = 0; i < 12; i++){
-        Triangulo triangulo;
-        triangulo.vertices[0] = vertices[static_cast<int>(faces[i].x)];
-        triangulo.vertices[1] = vertices[static_cast<int>(faces[i].y)];
-        triangulo.vertices[2] = vertices[static_cast<int>(faces[i].z)];
+    // for (int i = 0; i < 12; i++){
+    //     Triangulo triangulo;
+    //     triangulo.vertices[0] = vertices[static_cast<int>(faces[i].x)];
+    //     triangulo.vertices[1] = vertices[static_cast<int>(faces[i].y)];
+    //     triangulo.vertices[2] = vertices[static_cast<int>(faces[i].z)];
 
-        for(int j = 0; j < 3; j++){
-            triangulo.RotacionVertice(j, rotacion);
-            triangulo.TrasladarVertice(j, camaraPosision);
 
-            triangulo.ProyecionVertice(j, fovFactor);
+    //     for (int j = 0; j < 3; j++){
+  
+    //         triangulo.RotacionVertice(j, rotacion);
+    //         triangulo.TrasladarVertice(j, camaraPosision);
+         
+    //         triangulo.ProyecionVertice(j, fovFactor);
+     
+    //         triangulo.proyecionVertices[j].x += (ANCHOPANTALLA / 2);
+    //         triangulo.proyecionVertices[j].y += (ALTOPANTALLA / 2);
+    //     }
 
-            triangulo.proyecionVertices[j].x += (ANCHOPANTALLA / 2);
-            triangulo.proyecionVertices[j].y += (ALTOPANTALLA / 2);
-        }
-        trianguloRenderizado[i] = triangulo;
-    }
-    // cubo.Actualizar(deltaTime);
+    //     trianguloRenderizado[i] = triangulo;
+    // }
+    malla.Actualizar(deltaTime);
 }
 
 void Motor::Renderizar()
 {
-    // cubo.Renderizar();
-    for(int i = 0; i < 12; i++){
-        for(int j = 0; j < 3; j++){
-            dibujarPixel(
-                trianguloRenderizado[i].proyecionVertices[j].x,
-                trianguloRenderizado[i].proyecionVertices[j].y,
-                0xFF00FFFF
-            );
-        }
-    }
+    // for (int i = 0; i < 12; i++){
+    //     dibujarTriangulo(
+    //         trianguloRenderizado[i].proyecionVertices[0].x,
+    //         trianguloRenderizado[i].proyecionVertices[0].y,
+    //         trianguloRenderizado[i].proyecionVertices[1].x,
+    //         trianguloRenderizado[i].proyecionVertices[1].y,
+    //         trianguloRenderizado[i].proyecionVertices[2].x,
+    //         trianguloRenderizado[i].proyecionVertices[2].y,
+    //         0xFF00FFFF
+    //     );
+    // }
+    malla.Renderizar();
 }
 
 /**
