@@ -266,4 +266,9 @@ CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj: \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/deque \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_deque.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/deque.tcc
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/deque.tcc \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/fstream \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/codecvt.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/basic_file.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++io.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/fstream.tcc

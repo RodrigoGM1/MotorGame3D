@@ -224,45 +224,4 @@ CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_timer.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_tray.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_version.h \
- /home/rodrigo/pspdev/psp/include/SDL3/SDL_oldnames.h \
- /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/math.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath \
- /home/rodrigo/pspdev/psp/include/math.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/specfun.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/limits \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/gamma.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/special_function_util.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/bessel_function.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/beta_function.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/ell_integral.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/exp_integral.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/hypergeometric.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/legendre_function.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/modified_bessel_func.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_hermite.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_laguerre.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/riemann_zeta.tcc \
- /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/memory \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_tempbuf.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_uninitialized.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/align.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/unique_ptr.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/shared_ptr.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/shared_ptr_base.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/allocated_ptr.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/aligned_buffer.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/concurrence.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/shared_ptr_atomic.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/atomic_base.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/backward/auto_ptr.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/glue_memory_defs.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/execution_defs.h \
- /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h \
- /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/deque \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_deque.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/deque.tcc
+ /home/rodrigo/pspdev/psp/include/SDL3/SDL_oldnames.h

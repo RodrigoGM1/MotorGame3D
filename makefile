@@ -4,12 +4,9 @@ OBJ_DIR = obj
 SRC_DIR = src
 
 OBJS = $(OBJ_DIR)/game.o \
-	   $(OBJ_DIR)/Motor.o \
-	   $(OBJ_DIR)/Vector.o \
-	   $(OBJ_DIR)/Cubo.o \
-	   $(OBJ_DIR)/Triangulo.o \
-	   $(OBJ_DIR)/Malla.o
+	   $(OBJ_DIR)/Motor.o
 
+	   
 LDFLAGS = -lSDL3 -lm
 CFLAGS = -g -Wall
 

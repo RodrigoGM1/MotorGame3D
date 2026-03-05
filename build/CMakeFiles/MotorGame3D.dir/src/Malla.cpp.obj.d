@@ -166,6 +166,11 @@ CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_uninitialized.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_deque.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/deque.tcc \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/fstream \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/codecvt.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/basic_file.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++io.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/fstream.tcc \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/math.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath \

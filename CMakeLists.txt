@@ -2,13 +2,10 @@ cmake_minimum_required(VERSION 3.28.3)
 
 project(MotorGame3D)
 
-add_executable(${PROJECT_NAME} src/game.cpp 
-							   src/Motor.cpp
-							   src/Vector.cpp
-							   src/Cubo.cpp
-							   src/Triangulo.cpp
-							   src/Malla.cpp
-				)
+add_executable(${PROJECT_NAME} 
+	src/game.cpp 
+	src/Motor.cpp
+)
 
 include(FindPkgConfig)
 
