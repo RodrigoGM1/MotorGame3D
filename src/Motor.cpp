@@ -41,17 +41,30 @@ void Motor::manejarEventos()
 
 void Motor::limpiarPantalla()
 {
-    SDL_SetRenderDrawColor(renderizado, 0, 255, 255, 255);
+    SDL_SetRenderDrawColor(renderizado, 0, 0, 0, 255);
     SDL_RenderClear(renderizado);
 
     setDeltatime();
+    limpiarColorBuffer(0xFF000000);
+    // dibujarGrid(0xFFEEEEEE);
 }
 
 void Motor::actualizarPantalla(int ms)
 {
+    renderColorBuffer();
+
     SDL_RenderPresent(renderizado);
     SDL_Delay(ms);
 }
+
+// void Motor::dibujarRect(int sx, int sy, int ancho, int alto, uint32_t color)
+// {
+//     for (size_t y = sy; (y < sy + alto) && (y < ALTOPANTALLA); y++){
+//         for (size_t x = sx; (x < sx + ancho) && (x < ANCHOPANTALLA); x++){
+//             colorBuffer[(ANCHOPANTALLA * y) + x] = color;
+//         }
+//     }
+// }
 
 /**
  * Funciones privadas
@@ -71,6 +84,9 @@ int Motor::iniciarSDL()
     }
     this->estado = 1;
 
+    colorBuffer = static_cast<uint32_t*>(malloc(sizeof(uint32_t) * ANCHOPANTALLA * ALTOPANTALLA));
+    colorBufferTextura = SDL_CreateTexture(renderizado, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, ANCHOPANTALLA , ALTOPANTALLA);
+
     return 0;
 }
 
@@ -79,6 +95,37 @@ void Motor::setDeltatime(void)
     currentTime = SDL_GetTicks();
     deltaTime = (float)(currentTime - lastTime) / 100.0f;
     lastTime = currentTime;
+}
+
+void Motor::renderColorBuffer()
+{
+    SDL_UpdateTexture(colorBufferTextura, NULL, colorBuffer, ANCHOPANTALLA * sizeof(uint32_t));
+    SDL_RenderTexture(renderizado, colorBufferTextura, NULL, NULL);
+}
+
+void Motor::limpiarColorBuffer(uint32_t color)
+{
+    for(size_t y = 0; y < ALTOPANTALLA; y++){
+        for(size_t x = 0; x < ANCHOPANTALLA; x++){
+            colorBuffer[(ANCHOPANTALLA * y) + x] = color;
+        }
+    }
+}
+
+void Motor::dibujarGrid(uint32_t color)
+{
+    for(size_t y = 0; y < ALTOPANTALLA; y += 20){
+        for(size_t x = 0; x < ANCHOPANTALLA; x += 20){
+            colorBuffer[(ANCHOPANTALLA * y) + x] = color;
+        }
+    }
+}
+
+void Motor::dibujarPixel(int x, int y, unsigned int color)
+{
+    if(x >= 0 && x <ANCHOPANTALLA && y >= 0 && ALTOPANTALLA){
+        colorBuffer[(ANCHOPANTALLA * y) + x] = static_cast<uint32_t>(color);
+    }
 }
 
 /**
@@ -96,5 +143,5 @@ void Motor::Actualizar()
 
 void Motor::Renderizar()
 {
-
+    dibujarPixel(10, 10, 0xFF00FF00);
 }

@@ -40,8 +40,6 @@ CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj: /home/rodrigo/Documentos/Repositor
   /home/rodrigo/pspdev/psp/include/SDL3/SDL_loadso.h \
   /home/rodrigo/pspdev/psp/include/SDL3/SDL_locale.h \
   /home/rodrigo/pspdev/psp/include/SDL3/SDL_log.h \
-  /home/rodrigo/pspdev/psp/include/SDL3/SDL_main.h \
-  /home/rodrigo/pspdev/psp/include/SDL3/SDL_main_impl.h \
   /home/rodrigo/pspdev/psp/include/SDL3/SDL_messagebox.h \
   /home/rodrigo/pspdev/psp/include/SDL3/SDL_metal.h \
   /home/rodrigo/pspdev/psp/include/SDL3/SDL_misc.h \
@@ -454,6 +452,8 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
   /home/rodrigo/pspdev/psp/include/wctype.h
 
 
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_main.h:
+
 /home/rodrigo/pspdev/psp/include/wchar.h:
 
 /home/rodrigo/pspdev/psp/include/time.h:
@@ -554,11 +554,7 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/version.h:
 
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++allocator.h:
-
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/uses_allocator_args.h:
-
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/uses_allocator.h:
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_surface.h:
 
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_sensor.h:
 
@@ -583,8 +579,6 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_messagebox.h:
 
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_oldnames.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_main.h:
 
 /home/rodrigo/pspdev/psp/include/sys/features.h:
 
@@ -714,11 +708,21 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/std_abs.h:
 
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_main_impl.h:
+
+/home/rodrigo/pspdev/psp/include/pte_types.h:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_platform.h:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_thread.h:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_bits.h:
+
+/home/rodrigo/pspdev/psp/include/SDL3/SDL_dialog.h:
+
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_clipboard.h:
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/functexcept.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_surface.h:
 
 /home/rodrigo/pspdev/psp/include/stdint.h:
 
@@ -737,22 +741,6 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_guid.h:
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/new_allocator.h:
-
-/home/rodrigo/pspdev/psp/include/pte_types.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_platform.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_thread.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_bits.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_dialog.h:
-
-/home/rodrigo/pspdev/psp/include/SDL3/SDL_main_impl.h:
-
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++locale.h:
-
-/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/charconv.h:
 
 /home/rodrigo/pspdev/psp/include/sys/string.h:
 
@@ -819,6 +807,10 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 /home/rodrigo/pspdev/psp/include/sys/errno.h:
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/char_traits.h:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++locale.h:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/charconv.h:
 
 /home/rodrigo/pspdev/psp/include/sys/timespec.h:
 
@@ -905,3 +897,9 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/streambuf.tcc:
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/string_view.tcc:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/uses_allocator.h:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++allocator.h:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/uses_allocator_args.h:

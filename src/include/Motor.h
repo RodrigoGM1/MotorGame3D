@@ -26,6 +26,9 @@ public:
     unsigned int lastTime = 0, currentTime;
     float deltaTime;
 
+    uint32_t* colorBuffer;
+    SDL_Texture* colorBufferTextura;
+
     /* Funciones */
     Motor();
     ~Motor();
@@ -34,6 +37,9 @@ public:
     void manejarEventos(void);
     void limpiarPantalla(void);
     void actualizarPantalla(int ms);
+
+    // void dibujarRect(int sx, int sy, int ancho, int alto, uint32_t color);
+    void dibujarPixel(int x, int y, unsigned int color);
 
 private:
     int iniciarSDL(void);
@@ -46,6 +52,10 @@ public:
     void Configuracion(void);
     void Actualizar(void);
     void Renderizar(void);
+
+    void renderColorBuffer();
+    void limpiarColorBuffer(uint32_t color);
+    void dibujarGrid(uint32_t color);
 };
 
 #endif /* MOTOR_H */
