@@ -129,6 +129,30 @@ MotorGame3D/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/build
 .PHONY : MotorGame3D/fast
 
+src/Cubo.obj: src/Cubo.cpp.obj
+.PHONY : src/Cubo.obj
+
+# target to build an object file
+src/Cubo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj
+.PHONY : src/Cubo.cpp.obj
+
+src/Cubo.i: src/Cubo.cpp.i
+.PHONY : src/Cubo.i
+
+# target to preprocess a source file
+src/Cubo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.i
+.PHONY : src/Cubo.cpp.i
+
+src/Cubo.s: src/Cubo.cpp.s
+.PHONY : src/Cubo.s
+
+# target to generate assembly for a file
+src/Cubo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.s
+.PHONY : src/Cubo.cpp.s
+
 src/Motor.obj: src/Motor.cpp.obj
 .PHONY : src/Motor.obj
 
@@ -152,6 +176,54 @@ src/Motor.s: src/Motor.cpp.s
 src/Motor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Motor.cpp.s
 .PHONY : src/Motor.cpp.s
+
+src/Triangulo.obj: src/Triangulo.cpp.obj
+.PHONY : src/Triangulo.obj
+
+# target to build an object file
+src/Triangulo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj
+.PHONY : src/Triangulo.cpp.obj
+
+src/Triangulo.i: src/Triangulo.cpp.i
+.PHONY : src/Triangulo.i
+
+# target to preprocess a source file
+src/Triangulo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.i
+.PHONY : src/Triangulo.cpp.i
+
+src/Triangulo.s: src/Triangulo.cpp.s
+.PHONY : src/Triangulo.s
+
+# target to generate assembly for a file
+src/Triangulo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.s
+.PHONY : src/Triangulo.cpp.s
+
+src/Vector.obj: src/Vector.cpp.obj
+.PHONY : src/Vector.obj
+
+# target to build an object file
+src/Vector.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj
+.PHONY : src/Vector.cpp.obj
+
+src/Vector.i: src/Vector.cpp.i
+.PHONY : src/Vector.i
+
+# target to preprocess a source file
+src/Vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Vector.cpp.i
+.PHONY : src/Vector.cpp.i
+
+src/Vector.s: src/Vector.cpp.s
+.PHONY : src/Vector.s
+
+# target to generate assembly for a file
+src/Vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Vector.cpp.s
+.PHONY : src/Vector.cpp.s
 
 src/game.obj: src/game.cpp.obj
 .PHONY : src/game.obj
@@ -186,9 +258,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MotorGame3D"
+	@echo "... src/Cubo.obj"
+	@echo "... src/Cubo.i"
+	@echo "... src/Cubo.s"
 	@echo "... src/Motor.obj"
 	@echo "... src/Motor.i"
 	@echo "... src/Motor.s"
+	@echo "... src/Triangulo.obj"
+	@echo "... src/Triangulo.i"
+	@echo "... src/Triangulo.s"
+	@echo "... src/Vector.obj"
+	@echo "... src/Vector.i"
+	@echo "... src/Vector.s"
 	@echo "... src/game.obj"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
