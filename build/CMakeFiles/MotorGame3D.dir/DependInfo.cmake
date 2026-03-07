@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Cubo.cpp" "CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj.d"
+  "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Malla.cpp" "CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj.d"
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Motor.cpp" "CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj.d"
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Triangulo.cpp" "CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj.d"
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Vector.cpp" "CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj.d"

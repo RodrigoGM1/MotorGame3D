@@ -15,7 +15,7 @@ class Malla
 {
 private:
     Motor* motor;
-    Vector3 rotacion{0};
+    Vector3 rotacion{0, 0, 0};
     Vector3 rotacionActual;
     std::deque<Vector3> caras;
     std::deque<Vector3> vertices;

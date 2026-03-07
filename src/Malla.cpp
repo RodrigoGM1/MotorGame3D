@@ -61,8 +61,6 @@ void Malla::Actualizar(float deltaTime)
     rotacion.y += rotacionActual.y;
     rotacion.z += rotacionActual.z;
 
-    std::cout<<rotacion.x<<std::endl;
-
     for(size_t i = 0; i < triangulos.size(); i++){
         triangulos[i].vertices[0] = vertices[static_cast<int>(caras[i].x)];
         triangulos[i].vertices[1] = vertices[static_cast<int>(caras[i].y)];
@@ -70,11 +68,19 @@ void Malla::Actualizar(float deltaTime)
 
         for(int j = 0; j < 3; j++){
             triangulos[i].RotacionVertice(j, rotacion);
-
+            
             triangulos[i].TrasladarVertice(j, motor->camaraPosision);
+        }
 
+        triangulos[i].AplicarCulling(motor->camaraPosision);
+
+        if(triangulos[i].culling){
+            continue;
+        }
+
+        for(int j = 0; j < 3; j++){    
             triangulos[i].ProyectarVertice(j, motor->fovFactor);
-
+            
             triangulos[i].proyecionVertices[j].x += (ANCHOPANTALLA / 2);
             triangulos[i].proyecionVertices[j].y += (ALTOPANTALLA / 2);
         }
@@ -82,18 +88,20 @@ void Malla::Actualizar(float deltaTime)
 }
 
 void Malla::Renderizar()
-{
-    // for(size_t i = 0; i < triangulos.size(); i++){
-    //     for(int j = 0; j < 3; j++){
-    //         motor->dibujarPixel(
-    //             triangulos[i].proyecionVertices[j].x,
-    //             triangulos[i].proyecionVertices[j].y,
-    //             0xFF00FFFF
-    //         );
-    //     }
-    // }
-    
+{    
     for(size_t i = 0; i < triangulos.size(); i++){
+        if(triangulos[i].culling)
+            continue;
+        /*    
+        for(int j = 0; j < 3; j++){
+            motor->dibujarPixel(
+                triangulos[i].proyecionVertices[j].x,
+                triangulos[i].proyecionVertices[j].y,
+                0xFF00FFFF
+           );
+        }
+        */
+        
         motor->dibujarTriangulo(
             triangulos[i].proyecionVertices[0].x,
             triangulos[i].proyecionVertices[0].y,
@@ -103,6 +111,15 @@ void Malla::Renderizar()
             triangulos[i].proyecionVertices[2].y,
             0xFF00FFFF
         );
+        
+        motor->DibujarTrinaguloRelleno(
+            triangulos[i].proyecionVertices[0].x,
+            triangulos[i].proyecionVertices[0].y,
+            triangulos[i].proyecionVertices[1].x,
+            triangulos[i].proyecionVertices[1].y,
+            triangulos[i].proyecionVertices[2].x,
+            triangulos[i].proyecionVertices[2].y,
+            0xFFFFFFFF
+        );
     }
-    
 }

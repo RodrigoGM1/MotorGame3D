@@ -171,6 +171,14 @@ CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/basic_file.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++io.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/fstream.tcc \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/algorithm \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_algo.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/algorithmfwd.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_heap.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/uniform_int_dist.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_tempbuf.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/execution_defs.h \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/math.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath \
@@ -256,7 +264,6 @@ CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_oldnames.h \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/memory \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_tempbuf.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/align.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/unique_ptr.h \
@@ -270,5 +277,4 @@ CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/backward/auto_ptr.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/glue_memory_defs.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/execution_defs.h \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h

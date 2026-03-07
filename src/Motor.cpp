@@ -46,7 +46,7 @@ void Motor::limpiarPantalla()
 
     setDeltatime();
     limpiarColorBuffer(0xFF000000);
-    // dibujarGrid(0xFFEEEEEE);
+    dibujarGrid(0xFFEEEEEE);
 }
 
 void Motor::actualizarPantalla(int ms)
@@ -129,7 +129,7 @@ void Motor::dibujarLinea(int x0, int y0, int x1, int y1, uint32_t color)
     float xInc = dX / longuitud;
     float yInc = dY / longuitud;
 
-    for(int i = 0; i < longuitud; i++){
+    for(int i = 0; i < longuitud + 1; i++){
         dibujarPixel(
             round(x0 + (xInc * i)),
             round(y0 + (yInc * i)),
@@ -143,6 +143,63 @@ void Motor::dibujarTriangulo(int x0, int y0, int x1, int y1, int x2, int y2, uin
     dibujarLinea(x0, y0, x1, y1, color);
     dibujarLinea(x1, y1, x2, y2, color);
     dibujarLinea(x2, y2, x0, y0, color);
+}
+
+void Motor::DibujarTrinaguloRelleno(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color)
+{
+    if(y0 > y1){
+        IntercambioInt(&y0, &y1);
+        IntercambioInt(&x0, &x1);
+    }
+    if(y1 > y2){
+        IntercambioInt(&y1, &y2);
+        IntercambioInt(&x1, &x2);
+    }
+    if(y0 > y1){
+        IntercambioInt(&y0, &y1);
+        IntercambioInt(&x0, &x1);
+    }
+
+    int Mx = (((x2 - x0) * (y1 - y0)) / static_cast<float>((y2 - y0))) + x0;
+    int My = y1;
+
+    if(y1 == y2){
+        RellenoTrianguloArriba(x0, y0, x1, y1, x2, y2, color);
+    }
+    else if(y1 == y2){
+        RellenoTrianguloAbajo(x0, y0, x1, y1, x2, y2, color);
+    }
+    else{
+        RellenoTrianguloArriba(x0, y0, x1, y1, Mx, My, color);
+        RellenoTrianguloAbajo(x1, y1, Mx, My, x2, y2, color);
+    }
+}
+
+void Motor::RellenoTrianguloArriba(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color)
+{
+    float m1 = -((y1 - y0) / static_cast<float>((x0 - x1)));
+    float m2 = (y2 - y0) / static_cast<float>((x2 - x0));
+
+    for(int i = 0; i < (y1 - y0); i++){
+        dibujarLinea(x0 + (i / m1), y0 + i, x0 + (i / m2), y0 + i, color);
+    }
+}
+
+void Motor::RellenoTrianguloAbajo(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color)
+{
+    float m1 = -((y2 - y0) / static_cast<float>((x2 - x0)));
+    float m2 = -((y2 - y1) / static_cast<float>((x2 - x1)));
+
+    for(int i = 0; i <= (y2 - y1); i++){
+        dibujarLinea(x2 + (i / m1), y2 - i, x2 + (i /m2), y2 - i, color);
+    }
+}
+
+void Motor::IntercambioInt(int* a, int* b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 /**
@@ -185,7 +242,7 @@ Vector3 rotacion;
 void Motor::Configuracion()
 {
     // malla = Malla(this, vertices, 8, caras, 12);
-    malla = Malla(this, "./modelos3D/Toroide.obj");
+    malla = Malla(this, "./modelos3D/SemiCirculo.obj");
     malla.SetRotacion(0.01, 0.01, 0.01);
 }
 

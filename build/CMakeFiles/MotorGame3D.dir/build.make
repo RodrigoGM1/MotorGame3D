@@ -139,13 +139,28 @@ CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.s"
 	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Triangulo.cpp -o CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.s
 
+CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj: CMakeFiles/MotorGame3D.dir/flags.make
+CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Malla.cpp
+CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj: CMakeFiles/MotorGame3D.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj"
+	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj -MF CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj.d -o CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj -c /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Malla.cpp
+
+CMakeFiles/MotorGame3D.dir/src/Malla.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MotorGame3D.dir/src/Malla.cpp.i"
+	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Malla.cpp > CMakeFiles/MotorGame3D.dir/src/Malla.cpp.i
+
+CMakeFiles/MotorGame3D.dir/src/Malla.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MotorGame3D.dir/src/Malla.cpp.s"
+	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Malla.cpp -o CMakeFiles/MotorGame3D.dir/src/Malla.cpp.s
+
 # Object files for target MotorGame3D
 MotorGame3D_OBJECTS = \
 "CMakeFiles/MotorGame3D.dir/src/game.cpp.obj" \
 "CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj" \
 "CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj" \
 "CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj" \
-"CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj"
+"CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj" \
+"CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj"
 
 # External object files for target MotorGame3D
 MotorGame3D_EXTERNAL_OBJECTS =
@@ -155,9 +170,10 @@ MotorGame3D: CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj
 MotorGame3D: CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj
 MotorGame3D: CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj
 MotorGame3D: CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj
+MotorGame3D: CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj
 MotorGame3D: CMakeFiles/MotorGame3D.dir/build.make
 MotorGame3D: CMakeFiles/MotorGame3D.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable MotorGame3D"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable MotorGame3D"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MotorGame3D.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -E cmake_echo_color --cyan Not\ stripping\ binary\ for\ target\ MotorGame3D,\ build\ type\ is\ .
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Calling psp-fixup-imports for target MotorGame3D"

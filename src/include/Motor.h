@@ -49,6 +49,11 @@ public:
     void dibujarPixel(int x, int y, unsigned int color);
     void dibujarLinea(int x0, int y0, int x1, int y1, uint32_t color);
     void dibujarTriangulo(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color);
+    void DibujarTrinaguloRelleno(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color);
+    void RellenoTrianguloArriba(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color);
+    void RellenoTrianguloAbajo(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color);
+
+    void IntercambioInt(int* a, int* b);
 
 private:
     int iniciarSDL(void);

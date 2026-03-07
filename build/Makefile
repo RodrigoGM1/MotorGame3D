@@ -153,6 +153,30 @@ src/Cubo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.s
 .PHONY : src/Cubo.cpp.s
 
+src/Malla.obj: src/Malla.cpp.obj
+.PHONY : src/Malla.obj
+
+# target to build an object file
+src/Malla.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj
+.PHONY : src/Malla.cpp.obj
+
+src/Malla.i: src/Malla.cpp.i
+.PHONY : src/Malla.i
+
+# target to preprocess a source file
+src/Malla.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Malla.cpp.i
+.PHONY : src/Malla.cpp.i
+
+src/Malla.s: src/Malla.cpp.s
+.PHONY : src/Malla.s
+
+# target to generate assembly for a file
+src/Malla.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/Malla.cpp.s
+.PHONY : src/Malla.cpp.s
+
 src/Motor.obj: src/Motor.cpp.obj
 .PHONY : src/Motor.obj
 
@@ -261,6 +285,9 @@ help:
 	@echo "... src/Cubo.obj"
 	@echo "... src/Cubo.i"
 	@echo "... src/Cubo.s"
+	@echo "... src/Malla.obj"
+	@echo "... src/Malla.i"
+	@echo "... src/Malla.s"
 	@echo "... src/Motor.obj"
 	@echo "... src/Motor.i"
 	@echo "... src/Motor.s"
