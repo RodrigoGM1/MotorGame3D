@@ -57,15 +57,6 @@ void Motor::actualizarPantalla(int ms)
     SDL_Delay(ms);
 }
 
-// void Motor::dibujarRect(int sx, int sy, int ancho, int alto, uint32_t color)
-// {
-//     for (size_t y = sy; (y < sy + alto) && (y < ALTOPANTALLA); y++){
-//         for (size_t x = sx; (x < sx + ancho) && (x < ANCHOPANTALLA); x++){
-//             colorBuffer[(ANCHOPANTALLA * y) + x] = color;
-//         }
-//     }
-// }
-
 /**
  * Funciones privadas
 */
@@ -158,7 +149,7 @@ void Motor::dibujarTriangulo(int x0, int y0, int x1, int y1, int x2, int y2, uin
  * Funciones de renderizado
 */
 Vector3 vertices[8] = {
-    {-1, -1, -1},  // 0
+    {-1.0, -1.0, -1.0},  // 0
     { 1, -1, -1},  // 1
     {-1,  1, -1},  // 2
     { 1,  1, -1},  // 3
@@ -193,63 +184,17 @@ Vector3 rotacion;
 
 void Motor::Configuracion()
 {
-    // cubo = Cubo(this, 9);
-    // cubo.SetRotacion(0.01, 0.01, 0.01);
+    // malla = Malla(this, vertices, 8, caras, 12);
+    malla = Malla(this, "./modelos3D/Toroide.obj");
+    malla.SetRotacion(0.01, 0.01, 0.01);
 }
 
 void Motor::Actualizar()
 {
-    // cubo.Actualizar();
-    // Set new framr rotation amounts
-    rotacion.x += 0.01 * deltaTime;
-    rotacion.y += 0.01 * deltaTime;
-    rotacion.z += 0.01 * deltaTime;
-
-    for (size_t i = 0; i < 12; i++){
-        Triangulo triangle;
-        triangle.vertices[0] = vertices[static_cast<int>(caras[i].x)];
-        triangle.vertices[1] = vertices[static_cast<int>(caras[i].y)];
-        triangle.vertices[2] = vertices[static_cast<int>(caras[i].z)];
-
-        // Loop all vertice for the face and apply transformations
-        for (size_t j = 0; j < 3; j++){
-            // rotate and translate vertex array form the camera
-            triangle.RotacionVertice(j, rotacion);
-            triangle.TrasladarVertice(j, camaraPosision);
-            // project the vertex and scale it from 3D to 2D
-            triangle.ProyectarVertice(j, fovFactor);
-            // translate the projected point to the middle screen
-            triangle.proyecionVertices[j].x += (ANCHOPANTALLA / 2);
-            triangle.proyecionVertices[j].y += (ALTOPANTALLA / 2);
-        }
-
-        // Save the projected triangle in triangles render array
-        triangulosProyectados[i] = triangle;
-    }
+   malla.Actualizar(deltaTime);
 }
 
 void Motor::Renderizar()
 {
-    // cubo.Renderizado();
-
-    for (size_t i = 0; i < 12; i++){
-        // for (size_t j = 0; j < 3; j++){
-        //     dibujarPixel(
-        //         triangulosProyectados[i].proyecionVertices[j].x,
-        //         triangulosProyectados[i].proyecionVertices[j].y,
-        //         0xFF00FFFF
-        //     );
-        // }
-        dibujarTriangulo(
-            triangulosProyectados[i].proyecionVertices[0].x,
-            triangulosProyectados[i].proyecionVertices[0].y,
-            triangulosProyectados[i].proyecionVertices[1].x,
-            triangulosProyectados[i].proyecionVertices[1].y,
-            triangulosProyectados[i].proyecionVertices[2].x,
-            triangulosProyectados[i].proyecionVertices[2].y,
-            0xFF00FFFF
-        );
-    }
-
-    // dibujarLinea(0, 0, ANCHOPANTALLA / 2, ALTOPANTALLA / 2, 0xFF00FF00);
+    malla.Renderizar();
 }

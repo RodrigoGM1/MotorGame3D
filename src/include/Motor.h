@@ -7,6 +7,7 @@
 #include "Vector.h"
 #include "Cubo.h"
 #include "Triangulo.h"
+#include "Malla.h"
 
 #ifdef SDL_PLATFORM_PSP
     #define ANCHOPANTALLA 480
@@ -34,7 +35,7 @@ public:
     SDL_Texture* colorBufferTextura;
 
     float fovFactor = 200;
-    Vector3 camaraPosision{0, 0, -5};
+    Vector3 camaraPosision{0, 0, -2};
 
     /* Funciones */
     Motor();
@@ -45,7 +46,6 @@ public:
     void limpiarPantalla(void);
     void actualizarPantalla(int ms);
 
-    // void dibujarRect(int sx, int sy, int ancho, int alto, uint32_t color);
     void dibujarPixel(int x, int y, unsigned int color);
     void dibujarLinea(int x0, int y0, int x1, int y1, uint32_t color);
     void dibujarTriangulo(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color);
@@ -59,6 +59,7 @@ public:
      * Funciones de renderizado
     */
     // Cubo cubo;
+    Malla malla;
 
     void Configuracion(void);
     void Actualizar(void);

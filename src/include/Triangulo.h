@@ -6,6 +6,8 @@
 class Triangulo
 {
 public:
+    Triangulo() = default;
+
     Vector3 vertices[3];
     Vector2 proyecionVertices[3];
 
