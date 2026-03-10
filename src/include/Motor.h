@@ -4,6 +4,10 @@
 #include <iostream>
 #include <SDL3/SDL.h>
 
+#include "../imgui/imgui.h"
+#include "../imgui/backends/imgui_impl_sdl3.h"
+#include "../imgui/backends/imgui_impl_sdlrenderer3.h"
+
 #include "Vector.h"
 #include "Cubo.h"
 #include "Triangulo.h"

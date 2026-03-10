@@ -19,6 +19,10 @@ Motor::Motor()
 
 Motor::~Motor()
 {
+    ImGui_ImplSDLRenderer3_Shutdown();
+    ImGui_ImplSDL3_Shutdown();
+    ImGui::DestroyContext();
+
     destruirSDL();
 }
 
@@ -31,6 +35,7 @@ void Motor::destruirSDL()
 void Motor::manejarEventos()
 {
     while(SDL_PollEvent(&this->eventos)){
+        ImGui_ImplSDL3_ProcessEvent(&eventos);
         switch(this->eventos.type){
             case SDL_EVENT_QUIT:
                 estado = 0;
@@ -47,11 +52,26 @@ void Motor::limpiarPantalla()
     setDeltatime();
     limpiarColorBuffer(0xFF000000);
     dibujarGrid(0xFFEEEEEE);
+
+
+    ImGui_ImplSDLRenderer3_NewFrame();
+    ImGui_ImplSDL3_NewFrame();
+    ImGui::NewFrame();
+
+    {
+        ImGui::Begin("CPU 3D Rendering");
+        ImGui::Separator();
+        ImGui::Text(" %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+        ImGui::End();
+    }
 }
 
 void Motor::actualizarPantalla(int ms)
 {
     renderColorBuffer();
+    
+    ImGui::Render();
+    ImGui_ImplSDLRenderer3_RenderDrawData(ImGui::GetDrawData(), renderizado);
 
     SDL_RenderPresent(renderizado);
     SDL_Delay(ms);
@@ -77,6 +97,12 @@ int Motor::iniciarSDL()
 
     colorBuffer = static_cast<uint32_t*>(malloc(sizeof(uint32_t) * ANCHOPANTALLA * ALTOPANTALLA));
     colorBufferTextura = SDL_CreateTexture(renderizado, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, ANCHOPANTALLA , ALTOPANTALLA);
+
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGui::StyleColorsDark();
+    ImGui_ImplSDL3_InitForSDLRenderer(ventana, renderizado);
+    ImGui_ImplSDLRenderer3_Init(renderizado);
 
     return 0;
 }
@@ -241,17 +267,19 @@ Vector3 rotacion;
 
 void Motor::Configuracion()
 {
-    // malla = Malla(this, vertices, 8, caras, 12);
-    malla = Malla(this, "./modelos3D/SemiCirculo.obj");
+    malla = Malla(this, vertices, 8, caras, 12);
+    // malla = Malla(this, "./modelos3D/SemiCirculo.obj");
     malla.SetRotacion(0.01, 0.01, 0.01);
 }
 
 void Motor::Actualizar()
 {
-   malla.Actualizar(deltaTime);
+    malla.Actualizar(deltaTime);
 }
 
 void Motor::Renderizar()
 {
+    // ImGui::Render();
+
     malla.Renderizar();
 }

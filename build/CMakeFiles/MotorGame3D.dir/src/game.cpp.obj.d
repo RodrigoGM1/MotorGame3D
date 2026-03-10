@@ -225,6 +225,12 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_tray.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_version.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_oldnames.h \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/../imgui/imgui.h \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/../imgui/imconfig.h \
+ /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/float.h \
+ /home/rodrigo/pspdev/psp/include/assert.h \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/../imgui/backends/imgui_impl_sdl3.h \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/../imgui/backends/imgui_impl_sdlrenderer3.h \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/math.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath \

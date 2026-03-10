@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.28.3)
 project(MotorGame3D)
 
 add_executable(${PROJECT_NAME} 
-	src/game.cpp 
+	src/game.cpp
 	src/Motor.cpp
 	src/Vector.cpp
 	src/Cubo.cpp
@@ -11,19 +11,36 @@ add_executable(${PROJECT_NAME}
 	src/Malla.cpp
 )
 
+# add_library(imgui)
+
+# target_include_directories(${PROJECT_NAME}  PUBLIC 
+# 	${PROJECT_NAME}/src/imgui
+# 	${PROJECT_NAME}/src/imgui/backends
+# )
+
+# target_sources(${PROJECT_NAME} PUBLIC 
+# 	${PROJECT_NAME}/src/imgui/imgui.cpp
+#     ${PROJECT_NAME}/src/imgui/imgui_demo.cpp
+#     ${PROJECT_NAME}/src/imgui/imgui_draw.cpp
+#     ${PROJECT_NAME}/src/imgui/imgui_tables.cpp
+#     ${PROJECT_NAME}/src/imgui/imgui_widgets.cpp
+#     ${PROJECT_NAME}/src/imgui/backends/imgui_impl_sdl3.cpp
+#     ${PROJECT_NAME}/src/imgui/backends/imgui_impl_sdlrenderer3.cpp
+# )
+
 include(FindPkgConfig)
 
 pkg_search_module(SDL3 REQUIRED sdl3)
-if(NOT PSP)
-	pkg_search_module(GL REQUIRED gl)
-endif()
+# if(NOT PSP)
+# 	pkg_search_module(GL REQUIRED gl)
+# endif()
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${SDL3_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} PRIVATE ${SDL3_LIBRARIES})
-if(NOT PSP)
-	target_include_directories(${PROJECT_NAME} PRIVATE ${GL_INCLUDE_DIRS})
-	target_link_libraries(${PROJECT_NAME} PRIVATE ${GL_LIBRARIES})
-endif()
+# if(NOT PSP)
+# 	target_include_directories(${PROJECT_NAME} PRIVATE ${GL_INCLUDE_DIRS})
+# 	target_link_libraries(${PROJECT_NAME} PRIVATE ${GL_LIBRARIES})
+# endif()
 
 if(PSP)
 	create_pbp_file(

@@ -92,7 +92,7 @@ void Malla::Renderizar()
     for(size_t i = 0; i < triangulos.size(); i++){
         if(triangulos[i].culling)
             continue;
-        /*    
+           
         for(int j = 0; j < 3; j++){
             motor->dibujarPixel(
                 triangulos[i].proyecionVertices[j].x,
@@ -100,8 +100,8 @@ void Malla::Renderizar()
                 0xFF00FFFF
            );
         }
-        */
         
+        /*
         motor->dibujarTriangulo(
             triangulos[i].proyecionVertices[0].x,
             triangulos[i].proyecionVertices[0].y,
@@ -111,7 +111,7 @@ void Malla::Renderizar()
             triangulos[i].proyecionVertices[2].y,
             0xFF00FFFF
         );
-        
+            
         motor->DibujarTrinaguloRelleno(
             triangulos[i].proyecionVertices[0].x,
             triangulos[i].proyecionVertices[0].y,
@@ -121,5 +121,6 @@ void Malla::Renderizar()
             triangulos[i].proyecionVertices[2].y,
             0xFFFFFFFF
         );
+        */
     }
 }
