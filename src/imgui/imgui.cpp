@@ -15952,10 +15952,13 @@ static bool Platform_OpenInShellFn_DefaultImpl(ImGuiContext*, const char* path)
     }
     else
     {
+        #ifdef __LINUX__
         int status;
         waitpid(pid, &status, 0);
         return WEXITSTATUS(status) == 0;
+        #endif
     }
+    return 0;
 }
 #endif
 #else

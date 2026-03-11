@@ -6,5 +6,5 @@ CXX_DEFINES = -DPSP -D_PSP_FW_VERSION=600 -D__PSP__
 
 CXX_INCLUDES = 
 
-CXX_FLAGS = -I/home/rodrigo/pspdev/psp/include -I/home/rodrigo/pspdev/psp/sdk/include -DPSP
+CXX_FLAGS = -I/home/rodrigo/pspdev/psp/include -I/home/rodrigo/pspdev/psp/sdk/include -DPSP -std=gnu++20
 

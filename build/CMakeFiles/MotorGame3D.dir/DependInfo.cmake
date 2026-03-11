@@ -14,6 +14,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Triangulo.cpp" "CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj.d"
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Vector.cpp" "CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj.d"
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/game.cpp" "CMakeFiles/MotorGame3D.dir/src/game.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/game.cpp.obj.d"
+  "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdl3.cpp" "CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj.d"
+  "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlrenderer3.cpp" "CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj.d"
+  "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.cpp" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui.cpp.obj.d"
+  "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_draw.cpp" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_draw.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_draw.cpp.obj.d"
+  "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_tables.cpp" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_tables.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_tables.cpp.obj.d"
+  "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_widgets.cpp" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

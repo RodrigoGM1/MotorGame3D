@@ -1258,6 +1258,566 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
   /home/rodrigo/pspdev/psp/include/wchar.h \
   /home/rodrigo/pspdev/psp/include/wctype.h
 
+CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdl3.cpp \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imconfig.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdl3.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/float.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stddef.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdint.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_assert.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_asyncio.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_atomic.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_audio.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_begin_code.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_bits.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_blendmode.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_camera.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_clipboard.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_close_code.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_cpuinfo.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_dialog.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_dlopennote.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_endian.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_error.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_events.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_filesystem.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_gamepad.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_gpu.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_guid.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_haptic.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_hidapi.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_hints.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_init.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_iostream.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_joystick.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_keyboard.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_keycode.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_loadso.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_locale.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_log.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_messagebox.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_metal.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_misc.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_mouse.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_mutex.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_oldnames.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_pen.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_pixels.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_platform.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_platform_defines.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_power.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_process.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_properties.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_rect.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_render.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_scancode.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_sensor.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_stdinc.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_storage.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_surface.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_system.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_thread.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_time.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_timer.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_touch.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_tray.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_version.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_video.h \
+  /home/rodrigo/pspdev/psp/include/_ansi.h \
+  /home/rodrigo/pspdev/psp/include/_newlib_version.h \
+  /home/rodrigo/pspdev/psp/include/assert.h \
+  /home/rodrigo/pspdev/psp/include/machine/_default_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/ieeefp.h \
+  /home/rodrigo/pspdev/psp/include/newlib.h \
+  /home/rodrigo/pspdev/psp/include/stdint.h \
+  /home/rodrigo/pspdev/psp/include/stdio.h \
+  /home/rodrigo/pspdev/psp/include/string.h \
+  /home/rodrigo/pspdev/psp/include/strings.h \
+  /home/rodrigo/pspdev/psp/include/sys/_intsup.h \
+  /home/rodrigo/pspdev/psp/include/sys/_locale.h \
+  /home/rodrigo/pspdev/psp/include/sys/_stdint.h \
+  /home/rodrigo/pspdev/psp/include/sys/_types.h \
+  /home/rodrigo/pspdev/psp/include/sys/cdefs.h \
+  /home/rodrigo/pspdev/psp/include/sys/config.h \
+  /home/rodrigo/pspdev/psp/include/sys/features.h \
+  /home/rodrigo/pspdev/psp/include/sys/lock.h \
+  /home/rodrigo/pspdev/psp/include/sys/reent.h \
+  /home/rodrigo/pspdev/psp/include/sys/stdio.h \
+  /home/rodrigo/pspdev/psp/include/sys/string.h \
+  /home/rodrigo/pspdev/psp/include/wchar.h
+
+CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlrenderer3.cpp \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imconfig.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlrenderer3.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/float.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stddef.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdint.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_assert.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_asyncio.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_atomic.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_audio.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_begin_code.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_bits.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_blendmode.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_camera.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_clipboard.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_close_code.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_cpuinfo.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_dialog.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_dlopennote.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_endian.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_error.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_events.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_filesystem.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_gamepad.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_gpu.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_guid.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_haptic.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_hidapi.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_hints.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_init.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_iostream.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_joystick.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_keyboard.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_keycode.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_loadso.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_locale.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_log.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_messagebox.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_metal.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_misc.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_mouse.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_mutex.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_oldnames.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_pen.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_pixels.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_platform.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_platform_defines.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_power.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_process.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_properties.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_rect.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_render.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_scancode.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_sensor.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_stdinc.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_storage.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_surface.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_system.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_thread.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_time.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_timer.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_touch.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_tray.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_version.h \
+  /home/rodrigo/pspdev/psp/include/SDL3/SDL_video.h \
+  /home/rodrigo/pspdev/psp/include/_ansi.h \
+  /home/rodrigo/pspdev/psp/include/_newlib_version.h \
+  /home/rodrigo/pspdev/psp/include/assert.h \
+  /home/rodrigo/pspdev/psp/include/machine/_default_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/ieeefp.h \
+  /home/rodrigo/pspdev/psp/include/newlib.h \
+  /home/rodrigo/pspdev/psp/include/stdint.h \
+  /home/rodrigo/pspdev/psp/include/string.h \
+  /home/rodrigo/pspdev/psp/include/strings.h \
+  /home/rodrigo/pspdev/psp/include/sys/_intsup.h \
+  /home/rodrigo/pspdev/psp/include/sys/_locale.h \
+  /home/rodrigo/pspdev/psp/include/sys/_stdint.h \
+  /home/rodrigo/pspdev/psp/include/sys/_types.h \
+  /home/rodrigo/pspdev/psp/include/sys/cdefs.h \
+  /home/rodrigo/pspdev/psp/include/sys/config.h \
+  /home/rodrigo/pspdev/psp/include/sys/features.h \
+  /home/rodrigo/pspdev/psp/include/sys/lock.h \
+  /home/rodrigo/pspdev/psp/include/sys/reent.h \
+  /home/rodrigo/pspdev/psp/include/sys/string.h \
+  /home/rodrigo/pspdev/psp/include/wchar.h
+
+CMakeFiles/MotorGame3D.dir/src/imgui/imgui.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.cpp \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imconfig.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_internal.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/float.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/limits.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stddef.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdint.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/syslimits.h \
+  /home/rodrigo/pspdev/psp/include/_ansi.h \
+  /home/rodrigo/pspdev/psp/include/_newlib_version.h \
+  /home/rodrigo/pspdev/psp/include/alloca.h \
+  /home/rodrigo/pspdev/psp/include/assert.h \
+  /home/rodrigo/pspdev/psp/include/bits/posix_opt.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bit \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/concept_check.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/cpp_type_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/exception_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/functexcept.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/move.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/predefined_ops.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/ptr_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/requires_hosted.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/specfun.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/std_abs.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_algobase.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_funcs.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_types.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_pair.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/utility.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/version.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/concepts \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdlib \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/debug/assertions.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/debug/debug.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/numeric_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/type_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/limits \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/math.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++config.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/cpu_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/os_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/pstl_config.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/bessel_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/beta_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/ell_integral.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/exp_integral.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/gamma.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/hypergeometric.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/legendre_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/modified_bessel_func.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_hermite.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_laguerre.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/riemann_zeta.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/special_function_util.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/type_traits \
+  /home/rodrigo/pspdev/psp/include/limits.h \
+  /home/rodrigo/pspdev/psp/include/machine/_default_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/_endian.h \
+  /home/rodrigo/pspdev/psp/include/machine/_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/endian.h \
+  /home/rodrigo/pspdev/psp/include/machine/ieeefp.h \
+  /home/rodrigo/pspdev/psp/include/machine/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/machine/types.h \
+  /home/rodrigo/pspdev/psp/include/math.h \
+  /home/rodrigo/pspdev/psp/include/newlib.h \
+  /home/rodrigo/pspdev/psp/include/stdint.h \
+  /home/rodrigo/pspdev/psp/include/stdio.h \
+  /home/rodrigo/pspdev/psp/include/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/string.h \
+  /home/rodrigo/pspdev/psp/include/strings.h \
+  /home/rodrigo/pspdev/psp/include/sys/_intsup.h \
+  /home/rodrigo/pspdev/psp/include/sys/_locale.h \
+  /home/rodrigo/pspdev/psp/include/sys/_pthreadtypes.h \
+  /home/rodrigo/pspdev/psp/include/sys/_sigset.h \
+  /home/rodrigo/pspdev/psp/include/sys/_stdint.h \
+  /home/rodrigo/pspdev/psp/include/sys/_timespec.h \
+  /home/rodrigo/pspdev/psp/include/sys/_timeval.h \
+  /home/rodrigo/pspdev/psp/include/sys/_types.h \
+  /home/rodrigo/pspdev/psp/include/sys/cdefs.h \
+  /home/rodrigo/pspdev/psp/include/sys/config.h \
+  /home/rodrigo/pspdev/psp/include/sys/features.h \
+  /home/rodrigo/pspdev/psp/include/sys/lock.h \
+  /home/rodrigo/pspdev/psp/include/sys/reent.h \
+  /home/rodrigo/pspdev/psp/include/sys/sched.h \
+  /home/rodrigo/pspdev/psp/include/sys/select.h \
+  /home/rodrigo/pspdev/psp/include/sys/stdio.h \
+  /home/rodrigo/pspdev/psp/include/sys/string.h \
+  /home/rodrigo/pspdev/psp/include/sys/syslimits.h \
+  /home/rodrigo/pspdev/psp/include/sys/timespec.h \
+  /home/rodrigo/pspdev/psp/include/sys/types.h \
+  /home/rodrigo/pspdev/psp/include/sys/unistd.h \
+  /home/rodrigo/pspdev/psp/include/sys/wait.h \
+  /home/rodrigo/pspdev/psp/include/unistd.h
+
+CMakeFiles/MotorGame3D.dir/src/imgui/imgui_draw.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_draw.cpp \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imconfig.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_internal.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imstb_rectpack.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imstb_truetype.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/float.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/limits.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stddef.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdint.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/syslimits.h \
+  /home/rodrigo/pspdev/psp/include/_ansi.h \
+  /home/rodrigo/pspdev/psp/include/_newlib_version.h \
+  /home/rodrigo/pspdev/psp/include/alloca.h \
+  /home/rodrigo/pspdev/psp/include/assert.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bit \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/concept_check.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/cpp_type_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/exception_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/functexcept.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/move.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/predefined_ops.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/ptr_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/requires_hosted.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/specfun.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/std_abs.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_algobase.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_funcs.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_types.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_pair.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/utility.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/version.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/concepts \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdlib \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/debug/assertions.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/debug/debug.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/numeric_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/type_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/limits \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/math.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++config.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/cpu_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/os_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/pstl_config.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/bessel_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/beta_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/ell_integral.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/exp_integral.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/gamma.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/hypergeometric.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/legendre_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/modified_bessel_func.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_hermite.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_laguerre.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/riemann_zeta.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/special_function_util.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/type_traits \
+  /home/rodrigo/pspdev/psp/include/limits.h \
+  /home/rodrigo/pspdev/psp/include/machine/_default_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/ieeefp.h \
+  /home/rodrigo/pspdev/psp/include/machine/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/math.h \
+  /home/rodrigo/pspdev/psp/include/newlib.h \
+  /home/rodrigo/pspdev/psp/include/stdint.h \
+  /home/rodrigo/pspdev/psp/include/stdio.h \
+  /home/rodrigo/pspdev/psp/include/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/string.h \
+  /home/rodrigo/pspdev/psp/include/strings.h \
+  /home/rodrigo/pspdev/psp/include/sys/_intsup.h \
+  /home/rodrigo/pspdev/psp/include/sys/_locale.h \
+  /home/rodrigo/pspdev/psp/include/sys/_stdint.h \
+  /home/rodrigo/pspdev/psp/include/sys/_types.h \
+  /home/rodrigo/pspdev/psp/include/sys/cdefs.h \
+  /home/rodrigo/pspdev/psp/include/sys/config.h \
+  /home/rodrigo/pspdev/psp/include/sys/features.h \
+  /home/rodrigo/pspdev/psp/include/sys/lock.h \
+  /home/rodrigo/pspdev/psp/include/sys/reent.h \
+  /home/rodrigo/pspdev/psp/include/sys/stdio.h \
+  /home/rodrigo/pspdev/psp/include/sys/string.h \
+  /home/rodrigo/pspdev/psp/include/sys/syslimits.h
+
+CMakeFiles/MotorGame3D.dir/src/imgui/imgui_tables.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_tables.cpp \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imconfig.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_internal.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/float.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/limits.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stddef.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdint.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/syslimits.h \
+  /home/rodrigo/pspdev/psp/include/_ansi.h \
+  /home/rodrigo/pspdev/psp/include/_newlib_version.h \
+  /home/rodrigo/pspdev/psp/include/alloca.h \
+  /home/rodrigo/pspdev/psp/include/assert.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bit \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/concept_check.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/cpp_type_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/exception_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/functexcept.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/move.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/predefined_ops.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/ptr_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/requires_hosted.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/specfun.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/std_abs.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_algobase.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_funcs.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_types.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_pair.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/utility.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/version.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/concepts \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdlib \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/debug/assertions.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/debug/debug.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/numeric_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/type_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/limits \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/math.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++config.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/cpu_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/os_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/pstl_config.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/bessel_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/beta_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/ell_integral.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/exp_integral.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/gamma.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/hypergeometric.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/legendre_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/modified_bessel_func.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_hermite.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_laguerre.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/riemann_zeta.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/special_function_util.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/type_traits \
+  /home/rodrigo/pspdev/psp/include/limits.h \
+  /home/rodrigo/pspdev/psp/include/machine/_default_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/ieeefp.h \
+  /home/rodrigo/pspdev/psp/include/machine/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/math.h \
+  /home/rodrigo/pspdev/psp/include/newlib.h \
+  /home/rodrigo/pspdev/psp/include/stdint.h \
+  /home/rodrigo/pspdev/psp/include/stdio.h \
+  /home/rodrigo/pspdev/psp/include/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/string.h \
+  /home/rodrigo/pspdev/psp/include/strings.h \
+  /home/rodrigo/pspdev/psp/include/sys/_intsup.h \
+  /home/rodrigo/pspdev/psp/include/sys/_locale.h \
+  /home/rodrigo/pspdev/psp/include/sys/_stdint.h \
+  /home/rodrigo/pspdev/psp/include/sys/_types.h \
+  /home/rodrigo/pspdev/psp/include/sys/cdefs.h \
+  /home/rodrigo/pspdev/psp/include/sys/config.h \
+  /home/rodrigo/pspdev/psp/include/sys/features.h \
+  /home/rodrigo/pspdev/psp/include/sys/lock.h \
+  /home/rodrigo/pspdev/psp/include/sys/reent.h \
+  /home/rodrigo/pspdev/psp/include/sys/stdio.h \
+  /home/rodrigo/pspdev/psp/include/sys/string.h \
+  /home/rodrigo/pspdev/psp/include/sys/syslimits.h
+
+CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_widgets.cpp \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imconfig.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_internal.h \
+  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imstb_textedit.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/float.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/limits.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdarg.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stddef.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdint.h \
+  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/syslimits.h \
+  /home/rodrigo/pspdev/psp/include/_ansi.h \
+  /home/rodrigo/pspdev/psp/include/_newlib_version.h \
+  /home/rodrigo/pspdev/psp/include/alloca.h \
+  /home/rodrigo/pspdev/psp/include/assert.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bit \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/concept_check.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/cpp_type_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/exception_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/functexcept.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/move.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/predefined_ops.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/ptr_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/requires_hosted.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/specfun.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/std_abs.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_algobase.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_funcs.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_iterator_base_types.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_pair.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/utility.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/version.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/concepts \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdlib \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/debug/assertions.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/debug/debug.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/numeric_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/type_traits.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/limits \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/math.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++config.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/cpu_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/os_defines.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/pstl_config.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/bessel_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/beta_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/ell_integral.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/exp_integral.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/gamma.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/hypergeometric.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/legendre_function.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/modified_bessel_func.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_hermite.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_laguerre.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/riemann_zeta.tcc \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/special_function_util.h \
+  /home/rodrigo/pspdev/psp/include/c++/15.2.0/type_traits \
+  /home/rodrigo/pspdev/psp/include/limits.h \
+  /home/rodrigo/pspdev/psp/include/machine/_default_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/_types.h \
+  /home/rodrigo/pspdev/psp/include/machine/ieeefp.h \
+  /home/rodrigo/pspdev/psp/include/machine/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/math.h \
+  /home/rodrigo/pspdev/psp/include/newlib.h \
+  /home/rodrigo/pspdev/psp/include/stdint.h \
+  /home/rodrigo/pspdev/psp/include/stdio.h \
+  /home/rodrigo/pspdev/psp/include/stdlib.h \
+  /home/rodrigo/pspdev/psp/include/string.h \
+  /home/rodrigo/pspdev/psp/include/strings.h \
+  /home/rodrigo/pspdev/psp/include/sys/_intsup.h \
+  /home/rodrigo/pspdev/psp/include/sys/_locale.h \
+  /home/rodrigo/pspdev/psp/include/sys/_stdint.h \
+  /home/rodrigo/pspdev/psp/include/sys/_types.h \
+  /home/rodrigo/pspdev/psp/include/sys/cdefs.h \
+  /home/rodrigo/pspdev/psp/include/sys/config.h \
+  /home/rodrigo/pspdev/psp/include/sys/features.h \
+  /home/rodrigo/pspdev/psp/include/sys/lock.h \
+  /home/rodrigo/pspdev/psp/include/sys/reent.h \
+  /home/rodrigo/pspdev/psp/include/sys/stdio.h \
+  /home/rodrigo/pspdev/psp/include/sys/string.h \
+  /home/rodrigo/pspdev/psp/include/sys/syslimits.h
+
+
+/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imstb_textedit.h:
+
+/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_widgets.cpp:
+
+/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_tables.cpp:
+
+/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imstb_truetype.h:
+
+/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imstb_rectpack.h:
+
+/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_draw.cpp:
+
+/home/rodrigo/pspdev/psp/include/unistd.h:
+
+/home/rodrigo/pspdev/psp/include/sys/wait.h:
+
+/home/rodrigo/pspdev/psp/include/c++/15.2.0/stdlib.h:
+
+/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_internal.h:
+
+/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.cpp:
+
+/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdl3.cpp:
 
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_main.h:
 
@@ -1298,6 +1858,8 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/memory_resource.h:
 
 /home/rodrigo/pspdev/psp/include/limits.h:
+
+/home/rodrigo/pspdev/psp/include/sys/unistd.h:
 
 /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/locale_classes.tcc:
 
@@ -1494,6 +2056,8 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: /home/rodrigo/Documentos/Repositori
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_misc.h:
 
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_blendmode.h:
+
+/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlrenderer3.cpp:
 
 /home/rodrigo/pspdev/psp/include/SDL3/SDL_iostream.h:
 

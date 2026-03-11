@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdl3.cpp" "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj" "gcc" "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj.d"
+  "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlgpu3.cpp" "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj" "gcc" "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj.d"
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlrenderer3.cpp" "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj" "gcc" "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj.d"
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.cpp" "CMakeFiles/imgui.dir/src/imgui/imgui.cpp.obj" "gcc" "CMakeFiles/imgui.dir/src/imgui/imgui.cpp.obj.d"
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_demo.cpp" "CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj" "gcc" "CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj.d"

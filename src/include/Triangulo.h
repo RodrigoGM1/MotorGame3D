@@ -15,9 +15,9 @@ public:
 
     void ProyectarVertice(int verticeIndice, float fovFactor);
     void RotacionVertice(int verticeIndice, Vector3 rotacion);
-    void TrasladarVertice(int verticeIndice, Vector3 distancia);
+    void TrasladarVertice(int verticeIndice, float* distancia);
 
-    void AplicarCulling(Vector3 camara);
+    void AplicarCulling(float* camara);
 };
 
 #endif /* TRIANGULO_H */

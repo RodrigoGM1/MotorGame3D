@@ -632,3 +632,41 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:30 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles/CMakeScratch/TryCompile-FsP9lv"
+      binary: "/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles/CMakeScratch/TryCompile-FsP9lv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-I/home/rodrigo/pspdev/psp/include -I/home/rodrigo/pspdev/psp/sdk/include -DPSP"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/home/rodrigo/pspdev/lib -L/home/rodrigo/pspdev/psp/lib -L/home/rodrigo/pspdev/psp/sdk/lib -Wl,-zmax-page-size=128"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles/CMakeScratch/TryCompile-FsP9lv'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9f356/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9f356.dir/build.make CMakeFiles/cmTC_9f356.dir/build
+        gmake[1]: se entra en el directorio '/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles/CMakeScratch/TryCompile-FsP9lv'
+        Building C object CMakeFiles/cmTC_9f356.dir/src.c.obj
+        /home/rodrigo/pspdev/bin/psp-gcc -DCMAKE_HAVE_LIBC_PTHREAD -DPSP -D_PSP_FW_VERSION=600 -D__PSP__  -I/home/rodrigo/pspdev/psp/include -I/home/rodrigo/pspdev/psp/sdk/include -DPSP  -o CMakeFiles/cmTC_9f356.dir/src.c.obj -c /home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles/CMakeScratch/TryCompile-FsP9lv/src.c
+        Linking C executable cmTC_9f356
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f356.dir/link.txt --verbose=1
+        /home/rodrigo/pspdev/bin/psp-gcc -I/home/rodrigo/pspdev/psp/include -I/home/rodrigo/pspdev/psp/sdk/include -DPSP  -L/home/rodrigo/pspdev/lib -L/home/rodrigo/pspdev/psp/lib -L/home/rodrigo/pspdev/psp/sdk/lib -Wl,-zmax-page-size=128  CMakeFiles/cmTC_9f356.dir/src.c.obj -o cmTC_9f356 
+        gmake[1]: se sale del directorio '/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles/CMakeScratch/TryCompile-FsP9lv'
+        
+      exitCode: 0
+...

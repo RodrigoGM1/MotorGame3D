@@ -39,7 +39,7 @@ void Cubo::Actualizar()
 
         punto.Rotacion(rotacion);
 
-        punto.z -= motor->camaraPosision.z;
+        punto.z -= motor->camaraPosision[2];
 
         proyecionPunto[i] = punto.PerspectivaProyecion(motor->fovFactor);
     }

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj"
-  "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj.d"
+  "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj"
+  "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj.d"
   "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj"
   "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj.d"
   "CMakeFiles/imgui.dir/src/imgui/imgui.cpp.obj"

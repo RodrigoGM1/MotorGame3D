@@ -10,14 +10,14 @@ void Triangulo::RotacionVertice(int verticeIndice, Vector3 rotacion)
     vertices[verticeIndice].Rotacion(rotacion);
 }
 
-void Triangulo::TrasladarVertice(int verticeIndice, Vector3 distancia)
+void Triangulo::TrasladarVertice(int verticeIndice, float* distancia)
 {
-    vertices[verticeIndice].x -= distancia.x;
-    vertices[verticeIndice].y -= distancia.y;
-    vertices[verticeIndice].z -= distancia.z;
+    vertices[verticeIndice].x -= distancia[0];
+    vertices[verticeIndice].y -= distancia[1];
+    vertices[verticeIndice].z -= distancia[2];
 }
 
-void Triangulo::AplicarCulling(Vector3 camara)
+void Triangulo::AplicarCulling(float* camara)
 {
     Vector3 vectorAB = this->vertices[1] - this->vertices[0];
     Vector3 vectorAC = this->vertices[2] - this->vertices[0];
@@ -27,7 +27,7 @@ void Triangulo::AplicarCulling(Vector3 camara)
     Vector3 normal = vectorAB.ProductoCruzado(vectorAC);
     normal.Normalizar();
 
-    Vector3 camaraRay = camara - this->vertices[0];
+    Vector3 camaraRay = Vector3(camara[0], camara[1], camara[2]) - this->vertices[0];
 
     float normalCamara = normal.ProductoPunto(camaraRay);
 

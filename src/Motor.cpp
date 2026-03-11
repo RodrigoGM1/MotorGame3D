@@ -51,17 +51,37 @@ void Motor::limpiarPantalla()
 
     setDeltatime();
     limpiarColorBuffer(0xFF000000);
-    dibujarGrid(0xFFEEEEEE);
 
+    if(dibujarMalla) dibujarGrid(0xFFEEEEEE);
 
     ImGui_ImplSDLRenderer3_NewFrame();
     ImGui_ImplSDL3_NewFrame();
     ImGui::NewFrame();
 
     {
-        ImGui::Begin("CPU 3D Rendering");
+        ImGui::Begin("CPU 3D Renderizdo");
         ImGui::Separator();
         ImGui::Text(" %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+
+        ImGui::Checkbox("Dibujar Malla", &this->dibujarMalla);
+        ImGui::Checkbox("Dibujar Vertices", &this->dibujarVertices);
+        ImGui::Checkbox("Dibujar Lineas", &this->dibujarLineas);
+        ImGui::Checkbox("Rellenar Triangulos", &this->rellenarTriangulos);
+
+        ImGui::Separator();
+        ImGui::Text("Posision modelo");
+
+        ImGui::Separator();
+        ImGui::Text("Rotacion modelo (X,Y,Z)");
+        ImGui::SliderFloat3("Rot", rotacionModelo, 0, 0.05f);
+
+        ImGui::Separator();
+        ImGui::Text("Posision modelo (X,Y,Z)");
+        ImGui::SliderFloat2("Pos", posisionModelo, -2,  2);
+
+        ImGui::Text("Campo de visión");
+        ImGui::SliderInt("Fov", &this->fovFactor, 75, 1000);
+
         ImGui::End();
     }
 }
@@ -73,8 +93,12 @@ void Motor::actualizarPantalla(int ms)
     ImGui::Render();
     ImGui_ImplSDLRenderer3_RenderDrawData(ImGui::GetDrawData(), renderizado);
 
+    SDL_SetRenderVSync(renderizado, 1);
     SDL_RenderPresent(renderizado);
+
+
     SDL_Delay(ms);
+    std::cout<<SDL_GetTicks() / SDL_MS_PER_SECOND <<std::endl;
 }
 
 /**
@@ -268,12 +292,12 @@ Vector3 rotacion;
 void Motor::Configuracion()
 {
     malla = Malla(this, vertices, 8, caras, 12);
-    // malla = Malla(this, "./modelos3D/SemiCirculo.obj");
-    malla.SetRotacion(0.01, 0.01, 0.01);
+    // malla = Malla(this, "./modelos3D/Toroide.obj");
 }
 
 void Motor::Actualizar()
 {
+    malla.SetRotacion(rotacionModelo[0], rotacionModelo[1], rotacionModelo[2]);
     malla.Actualizar(deltaTime);
 }
 

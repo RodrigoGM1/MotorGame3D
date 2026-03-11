@@ -4,7 +4,7 @@
 # compile CXX with /home/rodrigo/pspdev/bin/psp-g++
 CXX_DEFINES = -DPSP -D_PSP_FW_VERSION=600 -D__PSP__
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui -I/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends
 
 CXX_FLAGS = -I/home/rodrigo/pspdev/psp/include -I/home/rodrigo/pspdev/psp/sdk/include -DPSP
 

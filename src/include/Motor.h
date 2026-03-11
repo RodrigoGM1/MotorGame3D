@@ -38,8 +38,21 @@ public:
     uint32_t* colorBuffer;
     SDL_Texture* colorBufferTextura;
 
-    float fovFactor = 200;
-    Vector3 camaraPosision{0, 0, -2};
+    // float fovFactor = 200;
+    // Vector3 camaraPosision{0, 0, 0};
+
+    /**
+     * Variables para Imgui
+    */
+
+    bool dibujarMalla = false;
+    bool dibujarVertices = true;
+    bool dibujarLineas = false;
+    bool rellenarTriangulos = false;
+    float rotacionModelo[3] = {0.01};
+    float posisionModelo[3] = {0, 0, -3};
+    float camaraPosision[3] = {0, 0, 0};
+    int fovFactor = 200;
 
     /* Funciones */
     Motor();

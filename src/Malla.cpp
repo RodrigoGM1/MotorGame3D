@@ -69,7 +69,7 @@ void Malla::Actualizar(float deltaTime)
         for(int j = 0; j < 3; j++){
             triangulos[i].RotacionVertice(j, rotacion);
             
-            triangulos[i].TrasladarVertice(j, motor->camaraPosision);
+            triangulos[i].TrasladarVertice(j, motor->posisionModelo);
         }
 
         triangulos[i].AplicarCulling(motor->camaraPosision);
@@ -92,35 +92,40 @@ void Malla::Renderizar()
     for(size_t i = 0; i < triangulos.size(); i++){
         if(triangulos[i].culling)
             continue;
-           
-        for(int j = 0; j < 3; j++){
-            motor->dibujarPixel(
-                triangulos[i].proyecionVertices[j].x,
-                triangulos[i].proyecionVertices[j].y,
-                0xFF00FFFF
-           );
+        
+        if(motor->dibujarVertices){
+            for(int j = 0; j < 3; j++){
+                motor->dibujarPixel(
+                    triangulos[i].proyecionVertices[j].x,
+                    triangulos[i].proyecionVertices[j].y,
+                    0xFFFF0000
+                );
+            }
         }
         
-        /*
-        motor->dibujarTriangulo(
-            triangulos[i].proyecionVertices[0].x,
-            triangulos[i].proyecionVertices[0].y,
-            triangulos[i].proyecionVertices[1].x,
-            triangulos[i].proyecionVertices[1].y,
-            triangulos[i].proyecionVertices[2].x,
-            triangulos[i].proyecionVertices[2].y,
-            0xFF00FFFF
-        );
-            
-        motor->DibujarTrinaguloRelleno(
-            triangulos[i].proyecionVertices[0].x,
-            triangulos[i].proyecionVertices[0].y,
-            triangulos[i].proyecionVertices[1].x,
-            triangulos[i].proyecionVertices[1].y,
-            triangulos[i].proyecionVertices[2].x,
-            triangulos[i].proyecionVertices[2].y,
-            0xFFFFFFFF
-        );
-        */
+        if(motor->dibujarLineas){
+            motor->dibujarTriangulo(
+                triangulos[i].proyecionVertices[0].x,
+                triangulos[i].proyecionVertices[0].y,
+                triangulos[i].proyecionVertices[1].x,
+                triangulos[i].proyecionVertices[1].y,
+                triangulos[i].proyecionVertices[2].x,
+                triangulos[i].proyecionVertices[2].y,
+                0xFF00FFFF
+            );
+        }
+        
+        if(motor->rellenarTriangulos){
+            motor->DibujarTrinaguloRelleno(
+                triangulos[i].proyecionVertices[0].x,
+                triangulos[i].proyecionVertices[0].y,
+                triangulos[i].proyecionVertices[1].x,
+                triangulos[i].proyecionVertices[1].y,
+                triangulos[i].proyecionVertices[2].x,
+                triangulos[i].proyecionVertices[2].y,
+                0xFFFFFFFF
+            );
+        }
+    
     }
 }

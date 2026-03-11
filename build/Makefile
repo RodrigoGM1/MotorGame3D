@@ -273,6 +273,150 @@ src/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
+src/imgui/backends/imgui_impl_sdl3.obj: src/imgui/backends/imgui_impl_sdl3.cpp.obj
+.PHONY : src/imgui/backends/imgui_impl_sdl3.obj
+
+# target to build an object file
+src/imgui/backends/imgui_impl_sdl3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj
+.PHONY : src/imgui/backends/imgui_impl_sdl3.cpp.obj
+
+src/imgui/backends/imgui_impl_sdl3.i: src/imgui/backends/imgui_impl_sdl3.cpp.i
+.PHONY : src/imgui/backends/imgui_impl_sdl3.i
+
+# target to preprocess a source file
+src/imgui/backends/imgui_impl_sdl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdl3.cpp.i
+.PHONY : src/imgui/backends/imgui_impl_sdl3.cpp.i
+
+src/imgui/backends/imgui_impl_sdl3.s: src/imgui/backends/imgui_impl_sdl3.cpp.s
+.PHONY : src/imgui/backends/imgui_impl_sdl3.s
+
+# target to generate assembly for a file
+src/imgui/backends/imgui_impl_sdl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdl3.cpp.s
+.PHONY : src/imgui/backends/imgui_impl_sdl3.cpp.s
+
+src/imgui/backends/imgui_impl_sdlrenderer3.obj: src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj
+.PHONY : src/imgui/backends/imgui_impl_sdlrenderer3.obj
+
+# target to build an object file
+src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj
+.PHONY : src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj
+
+src/imgui/backends/imgui_impl_sdlrenderer3.i: src/imgui/backends/imgui_impl_sdlrenderer3.cpp.i
+.PHONY : src/imgui/backends/imgui_impl_sdlrenderer3.i
+
+# target to preprocess a source file
+src/imgui/backends/imgui_impl_sdlrenderer3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.i
+.PHONY : src/imgui/backends/imgui_impl_sdlrenderer3.cpp.i
+
+src/imgui/backends/imgui_impl_sdlrenderer3.s: src/imgui/backends/imgui_impl_sdlrenderer3.cpp.s
+.PHONY : src/imgui/backends/imgui_impl_sdlrenderer3.s
+
+# target to generate assembly for a file
+src/imgui/backends/imgui_impl_sdlrenderer3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.s
+.PHONY : src/imgui/backends/imgui_impl_sdlrenderer3.cpp.s
+
+src/imgui/imgui.obj: src/imgui/imgui.cpp.obj
+.PHONY : src/imgui/imgui.obj
+
+# target to build an object file
+src/imgui/imgui.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui.cpp.obj
+.PHONY : src/imgui/imgui.cpp.obj
+
+src/imgui/imgui.i: src/imgui/imgui.cpp.i
+.PHONY : src/imgui/imgui.i
+
+# target to preprocess a source file
+src/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui.cpp.i
+.PHONY : src/imgui/imgui.cpp.i
+
+src/imgui/imgui.s: src/imgui/imgui.cpp.s
+.PHONY : src/imgui/imgui.s
+
+# target to generate assembly for a file
+src/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui.cpp.s
+.PHONY : src/imgui/imgui.cpp.s
+
+src/imgui/imgui_draw.obj: src/imgui/imgui_draw.cpp.obj
+.PHONY : src/imgui/imgui_draw.obj
+
+# target to build an object file
+src/imgui/imgui_draw.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui_draw.cpp.obj
+.PHONY : src/imgui/imgui_draw.cpp.obj
+
+src/imgui/imgui_draw.i: src/imgui/imgui_draw.cpp.i
+.PHONY : src/imgui/imgui_draw.i
+
+# target to preprocess a source file
+src/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui_draw.cpp.i
+.PHONY : src/imgui/imgui_draw.cpp.i
+
+src/imgui/imgui_draw.s: src/imgui/imgui_draw.cpp.s
+.PHONY : src/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+src/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui_draw.cpp.s
+.PHONY : src/imgui/imgui_draw.cpp.s
+
+src/imgui/imgui_tables.obj: src/imgui/imgui_tables.cpp.obj
+.PHONY : src/imgui/imgui_tables.obj
+
+# target to build an object file
+src/imgui/imgui_tables.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui_tables.cpp.obj
+.PHONY : src/imgui/imgui_tables.cpp.obj
+
+src/imgui/imgui_tables.i: src/imgui/imgui_tables.cpp.i
+.PHONY : src/imgui/imgui_tables.i
+
+# target to preprocess a source file
+src/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui_tables.cpp.i
+.PHONY : src/imgui/imgui_tables.cpp.i
+
+src/imgui/imgui_tables.s: src/imgui/imgui_tables.cpp.s
+.PHONY : src/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+src/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui_tables.cpp.s
+.PHONY : src/imgui/imgui_tables.cpp.s
+
+src/imgui/imgui_widgets.obj: src/imgui/imgui_widgets.cpp.obj
+.PHONY : src/imgui/imgui_widgets.obj
+
+# target to build an object file
+src/imgui/imgui_widgets.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.obj
+.PHONY : src/imgui/imgui_widgets.cpp.obj
+
+src/imgui/imgui_widgets.i: src/imgui/imgui_widgets.cpp.i
+.PHONY : src/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+src/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.i
+.PHONY : src/imgui/imgui_widgets.cpp.i
+
+src/imgui/imgui_widgets.s: src/imgui/imgui_widgets.cpp.s
+.PHONY : src/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+src/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.s
+.PHONY : src/imgui/imgui_widgets.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -300,6 +444,24 @@ help:
 	@echo "... src/game.obj"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
+	@echo "... src/imgui/backends/imgui_impl_sdl3.obj"
+	@echo "... src/imgui/backends/imgui_impl_sdl3.i"
+	@echo "... src/imgui/backends/imgui_impl_sdl3.s"
+	@echo "... src/imgui/backends/imgui_impl_sdlrenderer3.obj"
+	@echo "... src/imgui/backends/imgui_impl_sdlrenderer3.i"
+	@echo "... src/imgui/backends/imgui_impl_sdlrenderer3.s"
+	@echo "... src/imgui/imgui.obj"
+	@echo "... src/imgui/imgui.i"
+	@echo "... src/imgui/imgui.s"
+	@echo "... src/imgui/imgui_draw.obj"
+	@echo "... src/imgui/imgui_draw.i"
+	@echo "... src/imgui/imgui_draw.s"
+	@echo "... src/imgui/imgui_tables.obj"
+	@echo "... src/imgui/imgui_tables.i"
+	@echo "... src/imgui/imgui_tables.s"
+	@echo "... src/imgui/imgui_widgets.obj"
+	@echo "... src/imgui/imgui_widgets.i"
+	@echo "... src/imgui/imgui_widgets.s"
 .PHONY : help
 
 

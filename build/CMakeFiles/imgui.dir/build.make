@@ -83,24 +83,10 @@ CMakeFiles/imgui.dir/src/imgui/imgui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/src/imgui/imgui.cpp.s"
 	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.cpp -o CMakeFiles/imgui.dir/src/imgui/imgui.cpp.s
 
-CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj: CMakeFiles/imgui.dir/flags.make
-CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_demo.cpp
-CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj: CMakeFiles/imgui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj"
-	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj -MF CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj.d -o CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj -c /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_demo.cpp
-
-CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.i"
-	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_demo.cpp > CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.i
-
-CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.s"
-	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_demo.cpp -o CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.s
-
 CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.obj: CMakeFiles/imgui.dir/flags.make
 CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_draw.cpp
 CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.obj: CMakeFiles/imgui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.obj"
 	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.obj -MF CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.obj.d -o CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.obj -c /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_draw.cpp
 
 CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.i: cmake_force
@@ -114,7 +100,7 @@ CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.s: cmake_force
 CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.obj: CMakeFiles/imgui.dir/flags.make
 CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_tables.cpp
 CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.obj: CMakeFiles/imgui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.obj"
 	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.obj -MF CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.obj.d -o CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.obj -c /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_tables.cpp
 
 CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.i: cmake_force
@@ -128,7 +114,7 @@ CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.s: cmake_force
 CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.obj: CMakeFiles/imgui.dir/flags.make
 CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_widgets.cpp
 CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.obj: CMakeFiles/imgui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.obj"
 	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.obj -MF CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.obj.d -o CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.obj -c /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_widgets.cpp
 
 CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.i: cmake_force
@@ -139,24 +125,24 @@ CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.s"
 	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_widgets.cpp -o CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.s
 
-CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj: CMakeFiles/imgui.dir/flags.make
-CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdl3.cpp
-CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj: CMakeFiles/imgui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj"
-	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj -MF CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj.d -o CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj -c /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdl3.cpp
+CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj: CMakeFiles/imgui.dir/flags.make
+CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_demo.cpp
+CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj: CMakeFiles/imgui.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj"
+	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj -MF CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj.d -o CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj -c /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_demo.cpp
 
-CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.i"
-	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdl3.cpp > CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.i
+CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.i"
+	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_demo.cpp > CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.i
 
-CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.s"
-	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdl3.cpp -o CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.s
+CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.s"
+	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_demo.cpp -o CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.s
 
 CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj: CMakeFiles/imgui.dir/flags.make
 CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlrenderer3.cpp
 CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj: CMakeFiles/imgui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj"
 	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj -MF CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj.d -o CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj -c /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlrenderer3.cpp
 
 CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.i: cmake_force
@@ -167,26 +153,40 @@ CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.s: cmake_for
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.s"
 	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlrenderer3.cpp -o CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.s
 
+CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj: CMakeFiles/imgui.dir/flags.make
+CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj: /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlgpu3.cpp
+CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj: CMakeFiles/imgui.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj"
+	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj -MF CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj.d -o CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj -c /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlgpu3.cpp
+
+CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.i"
+	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlgpu3.cpp > CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.i
+
+CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.s"
+	/home/rodrigo/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/backends/imgui_impl_sdlgpu3.cpp -o CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.s
+
 # Object files for target imgui
 imgui_OBJECTS = \
 "CMakeFiles/imgui.dir/src/imgui/imgui.cpp.obj" \
-"CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj" \
 "CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.obj" \
 "CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.obj" \
 "CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.obj" \
-"CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj" \
-"CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj"
+"CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj" \
+"CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj" \
+"CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj"
 
 # External object files for target imgui
 imgui_EXTERNAL_OBJECTS =
 
 libimgui.a: CMakeFiles/imgui.dir/src/imgui/imgui.cpp.obj
-libimgui.a: CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj
 libimgui.a: CMakeFiles/imgui.dir/src/imgui/imgui_draw.cpp.obj
 libimgui.a: CMakeFiles/imgui.dir/src/imgui/imgui_tables.cpp.obj
 libimgui.a: CMakeFiles/imgui.dir/src/imgui/imgui_widgets.cpp.obj
-libimgui.a: CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdl3.cpp.obj
+libimgui.a: CMakeFiles/imgui.dir/src/imgui/imgui_demo.cpp.obj
 libimgui.a: CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlrenderer3.cpp.obj
+libimgui.a: CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_sdlgpu3.cpp.obj
 libimgui.a: CMakeFiles/imgui.dir/build.make
 libimgui.a: CMakeFiles/imgui.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rodrigo/Documentos/Repositorios/MotorGame3D/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libimgui.a"
