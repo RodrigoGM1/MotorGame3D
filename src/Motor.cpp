@@ -28,6 +28,10 @@ Motor::~Motor()
 
 void Motor::destruirSDL()
 {
+    #ifdef SDL_PLATFORM_PSP
+        SDL_ShowCursor();
+    #endif
+
     SDL_DestroyRenderer(renderizado);
     SDL_DestroyWindow(this->ventana);
 }
@@ -57,7 +61,7 @@ void Motor::limpiarPantalla()
     ImGui_ImplSDLRenderer3_NewFrame();
     ImGui_ImplSDL3_NewFrame();
     ImGui::NewFrame();
-
+    /*
     {
         ImGui::Begin("CPU 3D Renderizdo");
         ImGui::Separator();
@@ -84,6 +88,7 @@ void Motor::limpiarPantalla()
 
         ImGui::End();
     }
+    */
 }
 
 void Motor::actualizarPantalla(int ms)
@@ -98,7 +103,6 @@ void Motor::actualizarPantalla(int ms)
 
 
     SDL_Delay(ms);
-    std::cout<<SDL_GetTicks() / SDL_MS_PER_SECOND <<std::endl;
 }
 
 /**
@@ -107,7 +111,7 @@ void Motor::actualizarPantalla(int ms)
 
 int Motor::iniciarSDL()
 {
-    SDL_InitFlags banderasInicio = SDL_INIT_VIDEO;
+    SDL_InitFlags banderasInicio = SDL_INIT_VIDEO | SDL_INIT_GAMEPAD | SDL_INIT_JOYSTICK;
     SDL_WindowFlags banderasVentana = SDL_WINDOW_RESIZABLE;
     if(!SDL_Init(banderasInicio)){
         SDL_Log("No se pudo iniciar SDL3");
@@ -122,11 +126,19 @@ int Motor::iniciarSDL()
     colorBuffer = static_cast<uint32_t*>(malloc(sizeof(uint32_t) * ANCHOPANTALLA * ALTOPANTALLA));
     colorBufferTextura = SDL_CreateTexture(renderizado, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, ANCHOPANTALLA , ALTOPANTALLA);
 
+    SDL_CursorVisible();
+
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGui::StyleColorsDark();
     ImGui_ImplSDL3_InitForSDLRenderer(ventana, renderizado);
     ImGui_ImplSDLRenderer3_Init(renderizado);
+
+    // SDL_Cursor* cursor = SDL_CreateCursor((const Uint8*)0x00, 0, 100, 100, -1, -1);
+    // SDL_SetCursor(cursor);
+
+    // #ifdef SDL_PLATFORM_PSP
+    // #endif
 
     return 0;
 }

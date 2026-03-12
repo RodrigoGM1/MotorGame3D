@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
         motor.Actualizar();
         motor.Renderizar();
 
-        motor.actualizarPantalla(60);
+        motor.actualizarPantalla(8);
     }
     motor.destruirSDL();
     return 0;

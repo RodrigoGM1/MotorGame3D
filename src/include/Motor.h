@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <SDL3/SDL.h>
+#include <SDL3/SDL_joystick.h>
 
 #include "../imgui/imgui.h"
 #include "../imgui/backends/imgui_impl_sdl3.h"
