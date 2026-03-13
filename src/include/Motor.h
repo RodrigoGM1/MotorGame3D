@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <SDL3/SDL.h>
-#include <SDL3/SDL_joystick.h>
 
 #include "../imgui/imgui.h"
 #include "../imgui/backends/imgui_impl_sdl3.h"
@@ -46,6 +45,8 @@ public:
      * Variables para Imgui
     */
 
+    bool activarInterface = true;
+    
     bool dibujarMalla = false;
     bool dibujarVertices = true;
     bool dibujarLineas = false;

@@ -44,6 +44,15 @@ void Motor::manejarEventos()
             case SDL_EVENT_QUIT:
                 estado = 0;
                 break;
+            case SDL_EVENT_KEY_DOWN:
+                const bool* tecla = SDL_GetKeyboardState(NULL);
+                if(tecla[SDL_SCANCODE_I]) (activarInterface) ? this-> activarInterface = false : this->activarInterface = true;
+
+                #ifdef SDL_PLATFORM_PSP
+                if(SDLK_DOWN) { (activarInterface) ? this-> activarInterface = false : this->activarInterface = true; }
+                #endif
+
+                break;
         }
     }
 }
@@ -61,8 +70,8 @@ void Motor::limpiarPantalla()
     ImGui_ImplSDLRenderer3_NewFrame();
     ImGui_ImplSDL3_NewFrame();
     ImGui::NewFrame();
-    /*
-    {
+
+    if(activarInterface){
         ImGui::Begin("CPU 3D Renderizdo");
         ImGui::Separator();
         ImGui::Text(" %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
@@ -88,7 +97,6 @@ void Motor::limpiarPantalla()
 
         ImGui::End();
     }
-    */
 }
 
 void Motor::actualizarPantalla(int ms)
@@ -134,11 +142,11 @@ int Motor::iniciarSDL()
     ImGui_ImplSDL3_InitForSDLRenderer(ventana, renderizado);
     ImGui_ImplSDLRenderer3_Init(renderizado);
 
-    // SDL_Cursor* cursor = SDL_CreateCursor((const Uint8*)0x00, 0, 100, 100, -1, -1);
-    // SDL_SetCursor(cursor);
-
-    // #ifdef SDL_PLATFORM_PSP
-    // #endif
+    #ifdef SDL_PLATFORM_PSP
+    SDL_Cursor* cursor;
+    cursor = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_POINTER);
+    SDL_SetCursor(cursor);
+    #endif
 
     return 0;
 }
