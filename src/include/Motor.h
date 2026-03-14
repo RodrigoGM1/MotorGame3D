@@ -31,6 +31,7 @@ public:
     SDL_Window* ventana;
     SDL_Event eventos;
     int estado;
+    const bool* tecla;
 
     unsigned int lastTime = 0, currentTime;
     float deltaTime;
@@ -44,7 +45,6 @@ public:
     /**
      * Variables para Imgui
     */
-
     bool activarInterface = true;
     
     bool dibujarMalla = false;

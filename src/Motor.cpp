@@ -1,5 +1,79 @@
 #include "include/Motor.h"
 
+static const char *arrow[] = {
+  "    32    32        3            1",
+  "X c #000000",
+  ". c #ffffff",
+  "  c None",
+  "X                               ",
+  "XX                              ",
+  "X.X                             ",
+  "X..X                            ",
+  "X...X                           ",
+  "X....X                          ",
+  "X.....X                         ",
+  "X......X                        ",
+  "X.......X                       ",
+  "X........X                      ",
+  "X.....XXXXX                     ",
+  "X..X..X                         ",
+  "X.X X..X                        ",
+  "XX  X..X                        ",
+  "X    X..X                       ",
+  "     X..X                       ",
+  "      X..X                      ",
+  "      X..X                      ",
+  "       XX                       ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "                                ",
+  "0,0"
+};
+
+static SDL_Cursor *init_system_cursor(const char *image[])
+{
+  int i, row, col;
+  Uint8 data[4*32];
+  Uint8 mask[4*32];
+  int hot_x, hot_y;
+
+  i = -1;
+  for ( row=0; row<32; ++row ) {
+    for ( col=0; col<32; ++col ) {
+      if ( col % 8 ) {
+        data[i] <<= 1;
+        mask[i] <<= 1;
+      } else {
+        ++i;
+        data[i] = mask[i] = 0;
+      }
+      switch (image[4+row][col]) {
+        case 'X':
+          data[i] |= 0x01;
+          mask[i] |= 0x01;
+          break;
+        case '.':
+          mask[i] |= 0x01;
+          break;
+        case ' ':
+          break;
+      }
+    }
+  }
+  sscanf(image[4+row], "%d,%d", &hot_x, &hot_y);
+  return SDL_CreateCursor(data, mask, 32, 32, hot_x, hot_y);
+}
+
 /**
  * Declaraciones de funciones de la clase motor
 */
@@ -28,10 +102,6 @@ Motor::~Motor()
 
 void Motor::destruirSDL()
 {
-    #ifdef SDL_PLATFORM_PSP
-        SDL_ShowCursor();
-    #endif
-
     SDL_DestroyRenderer(renderizado);
     SDL_DestroyWindow(this->ventana);
 }
@@ -45,14 +115,14 @@ void Motor::manejarEventos()
                 estado = 0;
                 break;
             case SDL_EVENT_KEY_DOWN:
-                const bool* tecla = SDL_GetKeyboardState(NULL);
+                tecla = SDL_GetKeyboardState(NULL);
                 if(tecla[SDL_SCANCODE_I]) (activarInterface) ? this-> activarInterface = false : this->activarInterface = true;
-
-                #ifdef SDL_PLATFORM_PSP
-                if(SDLK_DOWN) { (activarInterface) ? this-> activarInterface = false : this->activarInterface = true; }
-                #endif
-
                 break;
+            
+            case SDL_EVENT_GAMEPAD_BUTTON_DOWN:
+                if(eventos.gbutton.button == SDL_GAMEPAD_BUTTON_START){
+                    (activarInterface) ? this-> activarInterface = false : this->activarInterface = true;    
+                }
         }
     }
 }
@@ -109,7 +179,6 @@ void Motor::actualizarPantalla(int ms)
     SDL_SetRenderVSync(renderizado, 1);
     SDL_RenderPresent(renderizado);
 
-
     SDL_Delay(ms);
 }
 
@@ -134,19 +203,14 @@ int Motor::iniciarSDL()
     colorBuffer = static_cast<uint32_t*>(malloc(sizeof(uint32_t) * ANCHOPANTALLA * ALTOPANTALLA));
     colorBufferTextura = SDL_CreateTexture(renderizado, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, ANCHOPANTALLA , ALTOPANTALLA);
 
-    SDL_CursorVisible();
-
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGui::StyleColorsDark();
     ImGui_ImplSDL3_InitForSDLRenderer(ventana, renderizado);
     ImGui_ImplSDLRenderer3_Init(renderizado);
 
-    #ifdef SDL_PLATFORM_PSP
-    SDL_Cursor* cursor;
-    cursor = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_POINTER);
-    SDL_SetCursor(cursor);
-    #endif
+    // SDL_Cursor* cursor = init_system_cursor(arrow);
+    // SDL_SetCursor(cursor);
 
     return 0;
 }
@@ -317,6 +381,13 @@ void Motor::Configuracion()
 
 void Motor::Actualizar()
 {
+    SDL_HideCursor();
+
+    SDL_Cursor* cursor = init_system_cursor(arrow);
+    SDL_SetCursor(cursor);
+
+    SDL_CursorVisible();
+
     malla.SetRotacion(rotacionModelo[0], rotacionModelo[1], rotacionModelo[2]);
     malla.Actualizar(deltaTime);
 }
