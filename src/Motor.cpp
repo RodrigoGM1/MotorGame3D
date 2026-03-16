@@ -1,5 +1,6 @@
 #include "include/Motor.h"
 
+/*
 static const char *arrow[] = {
   "    32    32        3            1",
   "X c #000000",
@@ -73,6 +74,7 @@ static SDL_Cursor *init_system_cursor(const char *image[])
   sscanf(image[4+row], "%d,%d", &hot_x, &hot_y);
   return SDL_CreateCursor(data, mask, 32, 32, hot_x, hot_y);
 }
+*/
 
 /**
  * Declaraciones de funciones de la clase motor
@@ -102,6 +104,7 @@ Motor::~Motor()
 
 void Motor::destruirSDL()
 {
+    SDL_CaptureMouse(false);
     SDL_DestroyRenderer(renderizado);
     SDL_DestroyWindow(this->ventana);
 }
@@ -119,10 +122,13 @@ void Motor::manejarEventos()
                 if(tecla[SDL_SCANCODE_I]) (activarInterface) ? this-> activarInterface = false : this->activarInterface = true;
                 break;
             
+
+
             case SDL_EVENT_GAMEPAD_BUTTON_DOWN:
                 if(eventos.gbutton.button == SDL_GAMEPAD_BUTTON_START){
                     (activarInterface) ? this-> activarInterface = false : this->activarInterface = true;    
                 }
+                break;
         }
     }
 }
@@ -144,6 +150,7 @@ void Motor::limpiarPantalla()
     if(activarInterface){
         ImGui::Begin("CPU 3D Renderizdo");
         ImGui::Separator();
+
         ImGui::Text(" %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
         ImGui::Checkbox("Dibujar Malla", &this->dibujarMalla);
@@ -164,7 +171,7 @@ void Motor::limpiarPantalla()
 
         ImGui::Text("Campo de visión");
         ImGui::SliderInt("Fov", &this->fovFactor, 75, 1000);
-
+        
         ImGui::End();
     }
 }
@@ -377,24 +384,17 @@ void Motor::Configuracion()
 {
     malla = Malla(this, vertices, 8, caras, 12);
     // malla = Malla(this, "./modelos3D/Toroide.obj");
+
+    
 }
 
 void Motor::Actualizar()
 {
-    SDL_HideCursor();
-
-    SDL_Cursor* cursor = init_system_cursor(arrow);
-    SDL_SetCursor(cursor);
-
-    SDL_CursorVisible();
-
     malla.SetRotacion(rotacionModelo[0], rotacionModelo[1], rotacionModelo[2]);
     malla.Actualizar(deltaTime);
 }
 
 void Motor::Renderizar()
 {
-    // ImGui::Render();
-
     malla.Renderizar();
 }
