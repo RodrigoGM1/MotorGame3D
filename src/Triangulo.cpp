@@ -1,5 +1,10 @@
 #include "include/Triangulo.h"
 
+bool Triangulo::operator<(const Triangulo & t) const
+{
+    return profundidadPromedio < t.profundidadPromedio;
+}
+
 void Triangulo::ProyectarVertice(int verticeIndice, float fovFactor)
 {
     proyecionVertices[verticeIndice] = vertices[verticeIndice].PerspectivaProyecion(fovFactor);
@@ -32,4 +37,9 @@ void Triangulo::AplicarCulling(float* camara)
     float normalCamara = normal.ProductoPunto(camaraRay);
 
     this->culling = (normalCamara < 0);
+}
+
+void Triangulo::ProfundidadPromedio()
+{
+    profundidadPromedio = (vertices[0].z + vertices[1].z + vertices[2].z) / 3;
 }

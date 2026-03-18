@@ -24,6 +24,7 @@ private:
 public:
     Malla() = default;
     Malla(Motor* motor, Vector3* vertices, int nVertices, Vector3* caras, int nCaras);
+    Malla(Motor* motor, Vector3* vertices, int nVertices, Vector3* caras, int nCaras, uint32_t* colores);
     Malla(Motor* motor, std::string direccion);
     
     void SetRotacion(float x, float y, float z);

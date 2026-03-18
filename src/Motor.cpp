@@ -1,80 +1,9 @@
 #include "include/Motor.h"
 
-/*
-static const char *arrow[] = {
-  "    32    32        3            1",
-  "X c #000000",
-  ". c #ffffff",
-  "  c None",
-  "X                               ",
-  "XX                              ",
-  "X.X                             ",
-  "X..X                            ",
-  "X...X                           ",
-  "X....X                          ",
-  "X.....X                         ",
-  "X......X                        ",
-  "X.......X                       ",
-  "X........X                      ",
-  "X.....XXXXX                     ",
-  "X..X..X                         ",
-  "X.X X..X                        ",
-  "XX  X..X                        ",
-  "X    X..X                       ",
-  "     X..X                       ",
-  "      X..X                      ",
-  "      X..X                      ",
-  "       XX                       ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "                                ",
-  "0,0"
-};
-
-static SDL_Cursor *init_system_cursor(const char *image[])
-{
-  int i, row, col;
-  Uint8 data[4*32];
-  Uint8 mask[4*32];
-  int hot_x, hot_y;
-
-  i = -1;
-  for ( row=0; row<32; ++row ) {
-    for ( col=0; col<32; ++col ) {
-      if ( col % 8 ) {
-        data[i] <<= 1;
-        mask[i] <<= 1;
-      } else {
-        ++i;
-        data[i] = mask[i] = 0;
-      }
-      switch (image[4+row][col]) {
-        case 'X':
-          data[i] |= 0x01;
-          mask[i] |= 0x01;
-          break;
-        case '.':
-          mask[i] |= 0x01;
-          break;
-        case ' ':
-          break;
-      }
-    }
-  }
-  sscanf(image[4+row], "%d,%d", &hot_x, &hot_y);
-  return SDL_CreateCursor(data, mask, 32, 32, hot_x, hot_y);
-}
-*/
+const int FPS = 30;
+const int drameDelay = 1000 / FPS;
+Uint32 frameStart;
+int frameTime;
 
 /**
  * Declaraciones de funciones de la clase motor
@@ -122,8 +51,6 @@ void Motor::manejarEventos()
                 if(tecla[SDL_SCANCODE_I]) (activarInterface) ? this-> activarInterface = false : this->activarInterface = true;
                 break;
             
-
-
             case SDL_EVENT_GAMEPAD_BUTTON_DOWN:
                 if(eventos.gbutton.button == SDL_GAMEPAD_BUTTON_START){
                     (activarInterface) ? this-> activarInterface = false : this->activarInterface = true;    
@@ -135,6 +62,8 @@ void Motor::manejarEventos()
 
 void Motor::limpiarPantalla()
 {
+    frameStart = SDL_GetTicks();
+
     SDL_SetRenderDrawColor(renderizado, 0, 0, 0, 255);
     SDL_RenderClear(renderizado);
 
@@ -157,9 +86,6 @@ void Motor::limpiarPantalla()
         ImGui::Checkbox("Dibujar Vertices", &this->dibujarVertices);
         ImGui::Checkbox("Dibujar Lineas", &this->dibujarLineas);
         ImGui::Checkbox("Rellenar Triangulos", &this->rellenarTriangulos);
-
-        ImGui::Separator();
-        ImGui::Text("Posision modelo");
 
         ImGui::Separator();
         ImGui::Text("Rotacion modelo (X,Y,Z)");
@@ -186,7 +112,10 @@ void Motor::actualizarPantalla(int ms)
     SDL_SetRenderVSync(renderizado, 1);
     SDL_RenderPresent(renderizado);
 
-    SDL_Delay(ms);
+    if(drameDelay > frameTime){
+        SDL_Delay(drameDelay - frameTime);
+    }
+    // SDL_Delay(ms);
 }
 
 /**
@@ -205,6 +134,10 @@ int Motor::iniciarSDL()
         SDL_Log("No se pudo crear la ventana SDL3");
         return 1;
     }
+    if(!SDL_SetRenderVSync(renderizado, 1)){
+        SDL_Log("No se pudo inciar SDL_SetRenderVSync");
+        return 1;
+    }
     this->estado = 1;
 
     colorBuffer = static_cast<uint32_t*>(malloc(sizeof(uint32_t) * ANCHOPANTALLA * ALTOPANTALLA));
@@ -212,12 +145,19 @@ int Motor::iniciarSDL()
 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
     ImGui::StyleColorsDark();
-    ImGui_ImplSDL3_InitForSDLRenderer(ventana, renderizado);
-    ImGui_ImplSDLRenderer3_Init(renderizado);
 
-    // SDL_Cursor* cursor = init_system_cursor(arrow);
-    // SDL_SetCursor(cursor);
+    if(!ImGui_ImplSDL3_InitForSDLRenderer(ventana, renderizado)){
+        SDL_Log("No se pudo inciar el renderizado ImGui");
+        return 1;
+    }
+    if(!ImGui_ImplSDLRenderer3_Init(renderizado)){
+        SDL_Log("No se pudo inciar ImGui");
+        return 1;
+    }
 
     return 0;
 }
@@ -377,15 +317,30 @@ Vector3 caras[12] = {
     {1, 5, 4}, 
     {1, 4, 0} 
 };
+
+uint32_t mallaColor[]{
+    0xFFFF0000, 
+    0xFFFF0000, 
+    0xFF00FF00, 
+    0xFF00FF00, 
+    0xFF0000FF, 
+    0xFF0000FF, 
+    0xFFFFA500, 
+    0xFFFFA500, 
+    0xFFFFFF00, 
+    0xFFFFFF00, 
+    0xFF00FFFF, 
+    0xFF00FFFF
+};
+
 Triangulo triangulosProyectados[12];
 Vector3 rotacion;
 
 void Motor::Configuracion()
 {
     malla = Malla(this, vertices, 8, caras, 12);
+    malla = Malla(this, vertices, 8, caras, 12, mallaColor);
     // malla = Malla(this, "./modelos3D/Toroide.obj");
-
-    
 }
 
 void Motor::Actualizar()

@@ -49,8 +49,8 @@ public:
     
     bool dibujarMalla = false;
     bool dibujarVertices = true;
-    bool dibujarLineas = false;
-    bool rellenarTriangulos = false;
+    bool dibujarLineas = true;
+    bool rellenarTriangulos = true;
     float rotacionModelo[3] = {0.01};
     float posisionModelo[3] = {0, 0, -3};
     float camaraPosision[3] = {0, 0, 0};

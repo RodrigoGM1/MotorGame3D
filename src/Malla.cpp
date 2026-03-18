@@ -14,6 +14,19 @@ Malla::Malla(Motor* motor, Vector3* vertices, int nVertices, Vector3* caras, int
     }
 }
 
+Malla::Malla(Motor* motor, Vector3* vertices, int nVertices, Vector3* caras, int nCaras, uint32_t* colores)
+{
+    this->motor = motor;
+
+    for(int i = 0; i < nVertices; i++){
+        this->vertices.push_back(vertices[i]);
+    }
+    for(int i = 0; i < nCaras; i++){
+        this->caras.push_back(caras[i]);
+        this->triangulos.push_back(Triangulo(colores[i]));
+    }
+}
+
 Malla::Malla(Motor* motor, std::string direccion)
 {
     this->motor = motor;
@@ -88,8 +101,12 @@ void Malla::Actualizar(float deltaTime)
 }
 
 void Malla::Renderizar()
-{    
-    for(size_t i = 0; i < triangulos.size(); i++){
+{
+    std::deque sortedTriangulo(triangulos);
+    std::sort(sortedTriangulo.begin(), sortedTriangulo.end());
+
+    // for(size_t i = 0; i < triangulos.size(); i++){
+    for(size_t i = 0; i < sortedTriangulo.size(); i++){
         if(triangulos[i].culling)
             continue;
         
@@ -123,7 +140,7 @@ void Malla::Renderizar()
                 triangulos[i].proyecionVertices[1].y,
                 triangulos[i].proyecionVertices[2].x,
                 triangulos[i].proyecionVertices[2].y,
-                0xFFFFFFFF
+                triangulos[i].color
             );
         }
     
