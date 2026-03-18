@@ -68,6 +68,16 @@ void Malla::SetRotacion(float x, float y, float z)
     rotacionActual = {x, y, z};
 }
 
+void Malla::SetEscala(float* escala)
+{
+    this->escala = {escala[0], escala[1], escala[2]};
+}
+
+void Malla::SetTraslacion(float* traslacion)
+{
+    this->traslacion = {traslacion[0], traslacion[1], traslacion[2]};
+}
+
 void Malla::Actualizar(float deltaTime)
 {
     rotacion.x += rotacionActual.x;
@@ -80,9 +90,7 @@ void Malla::Actualizar(float deltaTime)
         triangulos[i].vertices[2] = vertices[static_cast<int>(caras[i].z)];
 
         for(int j = 0; j < 3; j++){
-            triangulos[i].RotacionVertice(j, rotacion);
-            
-            triangulos[i].TrasladarVertice(j, motor->posisionModelo);
+            triangulos[i].MundoMatriz(j, escala, rotacion, traslacion);
         }
 
         triangulos[i].AplicarCulling(motor->camaraPosision);

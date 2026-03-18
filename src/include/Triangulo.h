@@ -4,6 +4,7 @@
 #include <cstdint>
 
 #include "Vector.h"
+#include "Matriz.h"
 
 class Triangulo
 {
@@ -21,8 +22,13 @@ public:
     bool operator<(const Triangulo & t) const;
 
     void ProyectarVertice(int verticeIndice, float fovFactor);
-    void RotacionVertice(int verticeIndice, Vector3 rotacion);
+    // void RotacionVertice(int verticeIndice, Vector3 rotacion);
     void TrasladarVertice(int verticeIndice, float* distancia);
+
+    void EscalaVertice(int verticeIndice, Vector3 escala);
+    void RotacionVertice(int verticeIndice, Vector3 rotacion);
+    void TrasladarVertice(int verticeIndice, Vector3 traslacion);
+    void MundoMatriz(int verticeIndice, Vector3 escala, Vector3 angulo, Vector3 trasladar);
 
     void AplicarCulling(float* camara);
     void ProfundidadPromedio();

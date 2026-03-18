@@ -268,6 +268,8 @@ CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/glue_memory_defs.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/execution_defs.h \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdint \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/deque \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_deque.h \

@@ -93,7 +93,11 @@ void Motor::limpiarPantalla()
 
         ImGui::Separator();
         ImGui::Text("Posision modelo (X,Y,Z)");
-        ImGui::SliderFloat2("Pos", posisionModelo, -2,  2);
+        ImGui::SliderFloat3("Pos", posisionModelo, -5,  5);
+
+        ImGui::Separator();
+        ImGui::Text("Escalado del modelo (X,Y,Z)");
+        ImGui::SliderFloat3("Escala", escaladoModelo, 0,  5);
 
         ImGui::Text("Campo de visión");
         ImGui::SliderInt("Fov", &this->fovFactor, 75, 1000);
@@ -338,7 +342,7 @@ Vector3 rotacion;
 
 void Motor::Configuracion()
 {
-    malla = Malla(this, vertices, 8, caras, 12);
+    // malla = Malla(this, vertices, 8, caras, 12);
     malla = Malla(this, vertices, 8, caras, 12, mallaColor);
     // malla = Malla(this, "./modelos3D/Toroide.obj");
 }
@@ -346,6 +350,8 @@ void Motor::Configuracion()
 void Motor::Actualizar()
 {
     malla.SetRotacion(rotacionModelo[0], rotacionModelo[1], rotacionModelo[2]);
+    malla.SetTraslacion(posisionModelo);
+    malla.SetEscala(escaladoModelo);
     malla.Actualizar(deltaTime);
 }
 

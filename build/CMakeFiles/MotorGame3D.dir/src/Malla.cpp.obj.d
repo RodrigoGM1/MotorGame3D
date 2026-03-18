@@ -198,6 +198,8 @@ CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_laguerre.tcc \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/riemann_zeta.tcc \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdint \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_stdinc.h \

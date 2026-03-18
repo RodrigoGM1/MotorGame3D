@@ -52,4 +52,21 @@ private:
     void RotacionZ(float angulo);
 };
 
+class Matriz4;
+class Vector4
+{
+public:
+    double x{0};
+    double y{0};
+    double z{0};
+    double w{0};
+
+    Vector4() = default;
+    Vector4(Vector3 v) : x(v.x), y(v.y), z(v.z), w(1){};
+
+    Vector3 ToVector3();
+
+    Vector4 operator*(Matriz4 m) const;
+};
+
 #endif /* VECTOR_H */

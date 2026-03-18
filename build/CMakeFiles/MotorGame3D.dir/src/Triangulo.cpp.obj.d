@@ -1,14 +1,22 @@
 CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj: \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Triangulo.cpp \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h \
- /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/math.h \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/requires_hosted.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdint \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/c++config.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/os_defines.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/psp/bits/cpu_defines.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/pstl_config.h \
+ /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdint.h \
+ /home/rodrigo/pspdev/psp/include/stdint.h \
+ /home/rodrigo/pspdev/psp/include/machine/_default_types.h \
+ /home/rodrigo/pspdev/psp/include/sys/features.h \
+ /home/rodrigo/pspdev/psp/include/_newlib_version.h \
+ /home/rodrigo/pspdev/psp/include/sys/_intsup.h \
+ /home/rodrigo/pspdev/psp/include/sys/_stdint.h \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/math.h \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath \
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/requires_hosted.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/cpp_type_traits.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/version.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/type_traits \
@@ -17,13 +25,10 @@ CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/sys/reent.h \
  /home/rodrigo/pspdev/psp/include/_ansi.h \
  /home/rodrigo/pspdev/psp/include/newlib.h \
- /home/rodrigo/pspdev/psp/include/_newlib_version.h \
  /home/rodrigo/pspdev/psp/include/sys/config.h \
  /home/rodrigo/pspdev/psp/include/machine/ieeefp.h \
- /home/rodrigo/pspdev/psp/include/sys/features.h \
  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stddef.h \
  /home/rodrigo/pspdev/psp/include/sys/cdefs.h \
- /home/rodrigo/pspdev/psp/include/machine/_default_types.h \
  /home/rodrigo/pspdev/psp/include/sys/_types.h \
  /home/rodrigo/pspdev/psp/include/machine/_types.h \
  /home/rodrigo/pspdev/psp/include/sys/lock.h \
@@ -62,4 +67,5 @@ CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/modified_bessel_func.tcc \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_hermite.tcc \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_laguerre.tcc \
- /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/riemann_zeta.tcc
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/riemann_zeta.tcc \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h

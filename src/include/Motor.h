@@ -51,8 +51,11 @@ public:
     bool dibujarVertices = true;
     bool dibujarLineas = true;
     bool rellenarTriangulos = true;
-    float rotacionModelo[3] = {0.01};
-    float posisionModelo[3] = {0, 0, -3};
+
+    float escaladoModelo[3] = {1, 1, 1};
+    float rotacionModelo[3] = {0, 0, 0};
+    float posisionModelo[3] = {0, 0, -5};
+
     float camaraPosision[3] = {0, 0, 0};
     int fovFactor = 200;
 

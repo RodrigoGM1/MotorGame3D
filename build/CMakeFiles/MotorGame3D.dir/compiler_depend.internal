@@ -9,6 +9,7 @@ CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h
@@ -169,6 +170,7 @@ CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/concepts
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstddef
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdint
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdio
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdlib
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cwchar
@@ -292,6 +294,7 @@ CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h
@@ -452,6 +455,7 @@ CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/concepts
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstddef
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdint
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdio
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdlib
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cwchar
@@ -575,6 +579,7 @@ CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h
@@ -735,6 +740,7 @@ CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/concepts
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstddef
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdint
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdio
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdlib
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cwchar
@@ -852,9 +858,11 @@ CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj
 
 CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Triangulo.cpp
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h
  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stddef.h
+ /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stdint.h
  /home/rodrigo/pspdev/psp/include/_ansi.h
  /home/rodrigo/pspdev/psp/include/_newlib_version.h
  /home/rodrigo/pspdev/psp/include/alloca.h
@@ -878,6 +886,7 @@ CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/version.h
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/concepts
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdint
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/debug/assertions.h
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/debug/debug.h
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/ext/numeric_traits.h
@@ -907,7 +916,10 @@ CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj
  /home/rodrigo/pspdev/psp/include/machine/stdlib.h
  /home/rodrigo/pspdev/psp/include/math.h
  /home/rodrigo/pspdev/psp/include/newlib.h
+ /home/rodrigo/pspdev/psp/include/stdint.h
  /home/rodrigo/pspdev/psp/include/stdlib.h
+ /home/rodrigo/pspdev/psp/include/sys/_intsup.h
+ /home/rodrigo/pspdev/psp/include/sys/_stdint.h
  /home/rodrigo/pspdev/psp/include/sys/_types.h
  /home/rodrigo/pspdev/psp/include/sys/cdefs.h
  /home/rodrigo/pspdev/psp/include/sys/config.h
@@ -917,6 +929,7 @@ CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj
 
 CMakeFiles/MotorGame3D.dir/src/Vector.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Vector.cpp
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h
  /home/rodrigo/pspdev/lib/gcc/psp/15.2.0/include/stddef.h
  /home/rodrigo/pspdev/psp/include/_ansi.h
@@ -987,6 +1000,7 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h
@@ -1149,6 +1163,7 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cmath
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/concepts
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstddef
+ /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdint
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdio
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdlib
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cwchar

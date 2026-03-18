@@ -1,4 +1,5 @@
 #include "include/Vector.h"
+#include "include/Matriz.h"
 
 Vector2 Vector2::operator+(const Vector2 &v) const
 {
@@ -166,4 +167,19 @@ void Vector3::RotacionZ(float angulo)
 
     x = nuevoX;
     y = nuevoY;
+}
+
+Vector3 Vector4::ToVector3()
+{
+    return Vector3(x, y, z);
+}
+
+Vector4 Vector4::operator*(Matriz4 m) const
+{
+    Vector4 resultado;
+    resultado.x = m.m[0][0] * x + m.m[0][1] * y + m.m[0][2] * z + m.m[0][3] * w;
+    resultado.y = m.m[1][0] * x + m.m[1][1] * y + m.m[1][2] * z + m.m[1][3] * w;
+    resultado.z = m.m[2][0] * x + m.m[2][1] * y + m.m[2][2] * z + m.m[2][3] * w;
+    resultado.w = m.m[3][0] * x + m.m[3][1] * y + m.m[3][2] * z + m.m[3][3] * w;
+    return resultado;
 }
