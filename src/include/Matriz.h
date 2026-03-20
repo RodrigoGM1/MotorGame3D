@@ -121,6 +121,33 @@ public:
         mundoMatriz = Matriz4::TrasladarMatriz(trasladar.x, trasladar.y, trasladar.z) * mundoMatriz;
         return mundoMatriz;
     }
+
+    static Matriz4 PerspectivaMatriz(float fov, float aspect, float znear, float zfar)
+    {
+        // | (h/w)*1/tan(fov/2)                0             0                   0 |
+        // |                  0     1/tan(fov/2)             0                   0 |
+        // |                  0                0    zf/(zf/zn)    (-zf*zn)/(zf-zn) |
+        // |                  0                0             1                   0 |
+        Matriz4 m = {{{0}}};
+        m.m[0][0] = aspect * (1 / tan(fov / 2));
+        m.m[1][1] = 1/ tan(fov / 2);
+        m.m[2][2] = zfar / (zfar - znear);
+        m.m[2][3] = (-zfar * znear) / (zfar - znear);
+        m.m[3][2] = 1.0;
+        return m;
+    }
+
+    static Vector4 ProyecionMatriz(Matriz4 perspectivaMatriz, Vector4 originalVector)
+    {
+        Vector4 resultado = originalVector * perspectivaMatriz;
+
+        if(resultado.w != 0.0){
+            resultado.x /= resultado.w;
+            resultado.y /= resultado.w;
+            resultado.z /= resultado.w;
+        }
+        return resultado;
+    }
 };
 
 #endif /* MATRIZ_H */

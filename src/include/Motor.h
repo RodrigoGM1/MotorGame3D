@@ -57,7 +57,13 @@ public:
     float posisionModelo[3] = {0, 0, -5};
 
     float camaraPosision[3] = {0, 0, 0};
-    int fovFactor = 200;
+    // int fovFactor = 200;
+
+    float fovFactor = M_PI / 3.0;
+    float fovFactorGradiens = (180.0 / M_PI) * fovFactor;
+    float aspectRatio = ALTOPANTALLA / static_cast<float>(ANCHOPANTALLA);
+    float zNear = 0.1, zFar = 20.0;
+    Matriz4 proyecionMatriz;
 
     /* Funciones */
     Motor();

@@ -5,9 +5,15 @@ bool Triangulo::operator<(const Triangulo & t) const
     return profundidadPromedio < t.profundidadPromedio;
 }
 
-void Triangulo::ProyectarVertice(int verticeIndice, float fovFactor)
+// void Triangulo::ProyectarVertice(int verticeIndice, float fovFactor)
+// {
+//     proyecionVertices[verticeIndice] = vertices[verticeIndice].PerspectivaProyecion(fovFactor);
+// }
+
+void Triangulo::ProyectarVertice(int verticeIndice, Matriz4 proyecionMatriz)
 {
-    proyecionVertices[verticeIndice] = vertices[verticeIndice].PerspectivaProyecion(fovFactor);
+    Vector4 trasformarVertice{vertices[verticeIndice]};
+    proyecionVertices[verticeIndice] = Matriz4::ProyecionMatriz(proyecionMatriz, trasformarVertice);
 }
 
 // void Triangulo::RotacionVertice(int verticeIndice, Vector3 rotacion)

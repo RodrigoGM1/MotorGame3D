@@ -100,10 +100,11 @@ void Motor::limpiarPantalla()
         ImGui::SliderFloat3("Escala", escaladoModelo, 0,  5);
 
         ImGui::Text("Campo de visión");
-        ImGui::SliderInt("Fov", &this->fovFactor, 75, 1000);
+        ImGui::SliderFloat("Fov", &this->fovFactorGradiens, 30, 120);
         
         ImGui::End();
     }
+    proyecionMatriz = Matriz4::PerspectivaMatriz((this->fovFactorGradiens / 180.0) * M_PI, aspectRatio, zNear, zFar);
 }
 
 void Motor::actualizarPantalla(int ms)
@@ -343,8 +344,8 @@ Vector3 rotacion;
 void Motor::Configuracion()
 {
     // malla = Malla(this, vertices, 8, caras, 12);
-    malla = Malla(this, vertices, 8, caras, 12, mallaColor);
-    // malla = Malla(this, "./modelos3D/Toroide.obj");
+    // malla = Malla(this, vertices, 8, caras, 12, mallaColor);
+    malla = Malla(this, "./modelos3D/Toroide.obj");
 }
 
 void Motor::Actualizar()

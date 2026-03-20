@@ -100,8 +100,12 @@ void Malla::Actualizar(float deltaTime)
         }
 
         for(int j = 0; j < 3; j++){    
-            triangulos[i].ProyectarVertice(j, motor->fovFactor);
+            // triangulos[i].ProyectarVertice(j, motor->fovFactor);
+            triangulos[i].ProyectarVertice(j, motor->proyecionMatriz);
             
+            triangulos[i].proyecionVertices[j].x *= (ANCHOPANTALLA / 2.0);
+            triangulos[i].proyecionVertices[j].y *= (ALTOPANTALLA / 2.0);
+
             triangulos[i].proyecionVertices[j].x += (ANCHOPANTALLA / 2);
             triangulos[i].proyecionVertices[j].y += (ALTOPANTALLA / 2);
         }

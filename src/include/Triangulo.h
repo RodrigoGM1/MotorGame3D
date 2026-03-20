@@ -17,11 +17,13 @@ public:
     float profundidadPromedio;
 
     Vector3 vertices[3];
-    Vector2 proyecionVertices[3];
+    // Vector2 proyecionVertices[3];
+    Vector4 proyecionVertices[3];
 
     bool operator<(const Triangulo & t) const;
 
-    void ProyectarVertice(int verticeIndice, float fovFactor);
+    // void ProyectarVertice(int verticeIndice, float fovFactor);
+    void ProyectarVertice(int verticeIndice, Matriz4 proyecionMatriz);
     // void RotacionVertice(int verticeIndice, Vector3 rotacion);
     void TrasladarVertice(int verticeIndice, float* distancia);
 
