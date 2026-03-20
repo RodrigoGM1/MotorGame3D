@@ -58,21 +58,38 @@ void Triangulo::MundoMatriz(int verticeIndice, Vector3 escala, Vector3 angulo, V
     vertices[verticeIndice] = trasformarVertice.ToVector3();
 }
 
-void Triangulo::AplicarCulling(float* camara)
+void Triangulo::CalcularNormal()
 {
     Vector3 vectorAB = this->vertices[1] - this->vertices[0];
     Vector3 vectorAC = this->vertices[2] - this->vertices[0];
     vectorAB.Normalizar();
     vectorAC.Normalizar();
 
-    Vector3 normal = vectorAB.ProductoCruzado(vectorAC);
+    normal = vectorAB.ProductoCruzado(vectorAC);
     normal.Normalizar();
+}
+
+void Triangulo::AplicarCulling(float* camara)
+{
+    // Vector3 vectorAB = this->vertices[1] - this->vertices[0];
+    // Vector3 vectorAC = this->vertices[2] - this->vertices[0];
+    // vectorAB.Normalizar();
+    // vectorAC.Normalizar();
+
+    // Vector3 normal = vectorAB.ProductoCruzado(vectorAC);
+    // normal.Normalizar();
 
     Vector3 camaraRay = Vector3(camara[0], camara[1], camara[2]) - this->vertices[0];
 
     float normalCamara = normal.ProductoPunto(camaraRay);
 
     this->culling = (normalCamara < 0);
+}
+
+void Triangulo::AplicarSombreado(Luz luz)
+{
+    float luzIntencidadFactro = normal.ProductoPunto(luz.direcion);
+    color = Luz::AplicarIntensidad(originalColor, luzIntencidadFactro);
 }
 
 void Triangulo::ProfundidadPromedio()

@@ -5,20 +5,24 @@
 
 #include "Vector.h"
 #include "Matriz.h"
+#include "Luz.h"
 
 class Triangulo
 {
 public:
-    Triangulo() = default;
-    Triangulo(uint32_t color) : color(color){};
-    
     bool culling = false;
     uint32_t color = 0XFFFFFFFF;
+    uint32_t originalColor = color;
     float profundidadPromedio;
 
     Vector3 vertices[3];
+    Vector3 normal;
     // Vector2 proyecionVertices[3];
     Vector4 proyecionVertices[3];
+
+    Triangulo() = default;
+    // Triangulo(uint32_t color) : color(color){};
+    Triangulo(uint32_t color) : color(color), originalColor(color){};
 
     bool operator<(const Triangulo & t) const;
 
@@ -32,7 +36,9 @@ public:
     void TrasladarVertice(int verticeIndice, Vector3 traslacion);
     void MundoMatriz(int verticeIndice, Vector3 escala, Vector3 angulo, Vector3 trasladar);
 
+    void CalcularNormal();
     void AplicarCulling(float* camara);
+    void AplicarSombreado(Luz luz);
     void ProfundidadPromedio();
 };
 

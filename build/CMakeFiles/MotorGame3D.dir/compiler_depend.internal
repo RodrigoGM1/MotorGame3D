@@ -8,6 +8,7 @@ CMakeFiles/MotorGame3D.dir/src/Cubo.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imconfig.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Luz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h
@@ -293,6 +294,7 @@ CMakeFiles/MotorGame3D.dir/src/Malla.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imconfig.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Luz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h
@@ -578,6 +580,7 @@ CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imconfig.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Luz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h
@@ -858,6 +861,7 @@ CMakeFiles/MotorGame3D.dir/src/Motor.cpp.obj
 
 CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/Triangulo.cpp
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Luz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Triangulo.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Vector.h
@@ -999,6 +1003,7 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imconfig.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Cubo.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Luz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Motor.h

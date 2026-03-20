@@ -68,4 +68,5 @@ CMakeFiles/MotorGame3D.dir/src/Triangulo.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_hermite.tcc \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/poly_laguerre.tcc \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/tr1/riemann_zeta.tcc \
- /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Luz.h

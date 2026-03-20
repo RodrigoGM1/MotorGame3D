@@ -94,17 +94,19 @@ void Malla::Actualizar(float deltaTime)
         }
 
         triangulos[i].AplicarCulling(motor->camaraPosision);
+        triangulos[i].AplicarSombreado(motor->luz);
+        triangulos[i].CalcularNormal();
 
         if(triangulos[i].culling){
             continue;
         }
 
         for(int j = 0; j < 3; j++){    
-            // triangulos[i].ProyectarVertice(j, motor->fovFactor);
             triangulos[i].ProyectarVertice(j, motor->proyecionMatriz);
             
             triangulos[i].proyecionVertices[j].x *= (ANCHOPANTALLA / 2.0);
             triangulos[i].proyecionVertices[j].y *= (ALTOPANTALLA / 2.0);
+            // triangulos[i].proyecionVertices[j].y *= -1;
 
             triangulos[i].proyecionVertices[j].x += (ANCHOPANTALLA / 2);
             triangulos[i].proyecionVertices[j].y += (ALTOPANTALLA / 2);

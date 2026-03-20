@@ -12,6 +12,7 @@
 #include "Cubo.h"
 #include "Triangulo.h"
 #include "Malla.h"
+#include "Luz.h"
 
 #ifdef SDL_PLATFORM_PSP
     #define ANCHOPANTALLA 480
@@ -64,6 +65,8 @@ public:
     float aspectRatio = ALTOPANTALLA / static_cast<float>(ANCHOPANTALLA);
     float zNear = 0.1, zFar = 20.0;
     Matriz4 proyecionMatriz;
+
+    Luz luz{.direcion{0, 0, 1}};
 
     /* Funciones */
     Motor();

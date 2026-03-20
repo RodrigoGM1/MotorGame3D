@@ -324,18 +324,18 @@ Vector3 caras[12] = {
 };
 
 uint32_t mallaColor[]{
-    0xFFFF0000, 
-    0xFFFF0000, 
-    0xFF00FF00, 
-    0xFF00FF00, 
-    0xFF0000FF, 
-    0xFF0000FF, 
-    0xFFFFA500, 
-    0xFFFFA500, 
-    0xFFFFFF00, 
-    0xFFFFFF00, 
-    0xFF00FFFF, 
-    0xFF00FFFF
+    0xFFFFFFFF, 
+    0xFFFFFFFF, 
+    0xFFFFFFFF, 
+    0xFFFFFFFF, 
+    0xFFFFFFFF, 
+    0xFFFFFFFF, 
+    0xFFFFFFFF, 
+    0xFFFFFFFF, 
+    0xFFFFFFFF, 
+    0xFFFFFFFF, 
+    0xFFFFFFFF, 
+    0xFFFFFFFF
 };
 
 Triangulo triangulosProyectados[12];
@@ -344,8 +344,8 @@ Vector3 rotacion;
 void Motor::Configuracion()
 {
     // malla = Malla(this, vertices, 8, caras, 12);
-    // malla = Malla(this, vertices, 8, caras, 12, mallaColor);
-    malla = Malla(this, "./modelos3D/Toroide.obj");
+    malla = Malla(this, vertices, 8, caras, 12, mallaColor);
+    // malla = Malla(this, "./modelos3D/Esfera.obj");
 }
 
 void Motor::Actualizar()
