@@ -271,6 +271,7 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/cstdint \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Matriz.h \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Luz.h \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Textura.h \
  /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/Malla.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/deque \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_deque.h \
@@ -286,5 +287,6 @@ CMakeFiles/MotorGame3D.dir/src/game.cpp.obj: \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/stl_heap.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/bits/uniform_int_dist.h \
  /home/rodrigo/pspdev/psp/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
+ /home/rodrigo/Documentos/Repositorios/MotorGame3D/src/include/upng.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_main.h \
  /home/rodrigo/pspdev/psp/include/SDL3/SDL_main_impl.h

@@ -13,6 +13,7 @@
 #include "Triangulo.h"
 #include "Malla.h"
 #include "Luz.h"
+#include "Textura.h"
 
 #ifdef SDL_PLATFORM_PSP
     #define ANCHOPANTALLA 480
@@ -52,6 +53,7 @@ public:
     bool dibujarVertices = true;
     bool dibujarLineas = true;
     bool rellenarTriangulos = true;
+    bool dibujarTextura = false;
 
     float escaladoModelo[3] = {1, 1, 1};
     float rotacionModelo[3] = {0, 0, 0};
@@ -68,6 +70,14 @@ public:
 
     Luz luz{.direcion{0, 0, 1}};
 
+    /**
+     * Variables de textura
+    */
+    int texturaAncho;
+    int texturaAlto;
+    uint32_t* mallaTextura{nullptr};
+    uint8_t* REDRICK_TEXTURE{nullptr};
+
     /* Funciones */
     Motor();
     ~Motor();
@@ -83,8 +93,14 @@ public:
     void DibujarTrinaguloRelleno(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color);
     void RellenoTrianguloArriba(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color);
     void RellenoTrianguloAbajo(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color);
+    // void DibujarTexturaTriangulo(int x0, int y0, Textura2 t0, int x1, int y1, Textura2 t1, int x2, int y2, Textura2 t2, uint32_t* textura);
+    void DibujarTexturaTriangulo(int x0, int y0, float z0, float w0, Textura2 uv0, int x1, int y1, float z1, float w1, Textura2 uv1, int x2, int y2, float z2, float w2, Textura2 uv2, uint32_t* textura, int texturaAncho, int texturaAlto);
+    // void DibujarTexel(int x, int y, Vector2 a, Vector2 b, Vector2 c, Textura2 t0, Textura2 t1, Textura2 t2, uint32_t *texture, Motor* motor);
+    void DibujarTexel(int x, int y, Vector4 a, Vector4 b, Vector4 c, Textura2 t0, Textura2 t1, Textura2 t2, float* uDivW, float* vDivW, float* oneDivw, uint32_t *texture, int texturaAncho, int texturaAlto);
 
     void IntercambioInt(int* a, int* b);
+    void IntercambioFloat(float* a, float* b);
+    void IntercambioTexturea(Textura2* a, Textura2* b);
 
 private:
     int iniciarSDL(void);

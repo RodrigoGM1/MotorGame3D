@@ -174,6 +174,11 @@ Vector3 Vector4::ToVector3()
     return Vector3(x, y, z);
 }
 
+Vector2 Vector4::ToVector2()
+{
+    return Vector2(x, y);
+}
+
 Vector4 Vector4::operator*(Matriz4 m) const
 {
     Vector4 resultado;

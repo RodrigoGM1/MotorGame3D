@@ -71,6 +71,7 @@ add_executable(${PROJECT_NAME}
 	src/Cubo.cpp
 	src/Triangulo.cpp
 	src/Malla.cpp
+	src/upng.cpp
     src/imgui/imgui.cpp
     src/imgui/imgui_draw.cpp
     src/imgui/imgui_widgets.cpp

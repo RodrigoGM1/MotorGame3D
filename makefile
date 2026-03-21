@@ -10,7 +10,8 @@ OBJS = $(OBJ_DIR)/game.o \
 	   $(OBJ_DIR)/Vector.o \
 	   $(OBJ_DIR)/Cubo.o \
 	   $(OBJ_DIR)/Triangulo.o \
-	   $(OBJ_DIR)/Malla.o
+	   $(OBJ_DIR)/Malla.o \
+	   $(OBJ_DIR)/upng.o
 
 OBJS += $(IMGUI_DIR)/imgui.o \
 		$(IMGUI_DIR)/imgui_demo.o \

@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_draw.cpp" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_draw.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_draw.cpp.obj.d"
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_tables.cpp" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_tables.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_tables.cpp.obj.d"
   "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/imgui/imgui_widgets.cpp" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.obj.d"
+  "/home/rodrigo/Documentos/Repositorios/MotorGame3D/src/upng.cpp" "CMakeFiles/MotorGame3D.dir/src/upng.cpp.obj" "gcc" "CMakeFiles/MotorGame3D.dir/src/upng.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

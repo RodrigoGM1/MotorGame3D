@@ -46,6 +46,26 @@ public:
     Vector2 PerspectivaProyecion(float fovFactor);
     void Rotacion(Vector3 angulos);
 
+    static Vector3 PesoBaricentrico(Vector2 a, Vector2 b, Vector2 c, Vector2 p)
+    {
+        Vector2 ab = b - a;
+        Vector2 bc = c - b;
+        Vector2 ac = c - a;
+        Vector2 ap = p - a;
+        Vector2 bp = p - b;
+
+        float areaTrinagulo = (ab.x * ac.y - ab.y * ac.x);
+
+        float alfa = (bc.x * bp.y - bp.x * bc.y) / areaTrinagulo;
+        
+        float beta = (ap.x * ac.y - ac.x * ap.y) / areaTrinagulo;
+
+        float gamma = 1- alfa - beta;
+
+        Vector3 peso = {alfa, beta, gamma};
+        return peso;
+    }
+
 private:
     void RotacionX(float angulo);
     void RotacionY(float angulo);
@@ -63,8 +83,10 @@ public:
 
     Vector4() = default;
     Vector4(Vector3 v) : x(v.x), y(v.y), z(v.z), w(1){};
+    Vector4(double x, double y, double z, double w) : x(x), y(y), z(z), w(w){};
 
     Vector3 ToVector3();
+    Vector2 ToVector2();
 
     Vector4 operator*(Matriz4 m) const;
 };

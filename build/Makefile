@@ -417,6 +417,30 @@ src/imgui/imgui_widgets.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.s
 .PHONY : src/imgui/imgui_widgets.cpp.s
 
+src/upng.obj: src/upng.cpp.obj
+.PHONY : src/upng.obj
+
+# target to build an object file
+src/upng.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/upng.cpp.obj
+.PHONY : src/upng.cpp.obj
+
+src/upng.i: src/upng.cpp.i
+.PHONY : src/upng.i
+
+# target to preprocess a source file
+src/upng.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/upng.cpp.i
+.PHONY : src/upng.cpp.i
+
+src/upng.s: src/upng.cpp.s
+.PHONY : src/upng.s
+
+# target to generate assembly for a file
+src/upng.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MotorGame3D.dir/build.make CMakeFiles/MotorGame3D.dir/src/upng.cpp.s
+.PHONY : src/upng.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -462,6 +486,9 @@ help:
 	@echo "... src/imgui/imgui_widgets.obj"
 	@echo "... src/imgui/imgui_widgets.i"
 	@echo "... src/imgui/imgui_widgets.s"
+	@echo "... src/upng.obj"
+	@echo "... src/upng.i"
+	@echo "... src/upng.s"
 .PHONY : help
 
 

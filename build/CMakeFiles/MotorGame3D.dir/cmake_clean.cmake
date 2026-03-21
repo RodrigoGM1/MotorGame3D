@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_tables.cpp.obj.d"
   "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.obj"
   "CMakeFiles/MotorGame3D.dir/src/imgui/imgui_widgets.cpp.obj.d"
+  "CMakeFiles/MotorGame3D.dir/src/upng.cpp.obj"
+  "CMakeFiles/MotorGame3D.dir/src/upng.cpp.obj.d"
   "MotorGame3D"
   "MotorGame3D.pdb"
 )

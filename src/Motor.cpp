@@ -28,6 +28,9 @@ Motor::~Motor()
     ImGui_ImplSDL3_Shutdown();
     ImGui::DestroyContext();
 
+    malla.Liberar();
+    delete[] REDRICK_TEXTURE;
+
     destruirSDL();
 }
 
@@ -86,6 +89,7 @@ void Motor::limpiarPantalla()
         ImGui::Checkbox("Dibujar Vertices", &this->dibujarVertices);
         ImGui::Checkbox("Dibujar Lineas", &this->dibujarLineas);
         ImGui::Checkbox("Rellenar Triangulos", &this->rellenarTriangulos);
+        ImGui::Checkbox("Dibujar Textura", &this->dibujarTextura);
 
         ImGui::Separator();
         ImGui::Text("Rotacion modelo (X,Y,Z)");
@@ -281,9 +285,140 @@ void Motor::RellenoTrianguloAbajo(int x0, int y0, int x1, int y1, int x2, int y2
     }
 }
 
+void Motor::DibujarTexturaTriangulo(int x0, int y0, float z0, float w0, Textura2 uv0, int x1, int y1, float z1, float w1, Textura2 uv1, int x2, int y2, float z2, float w2, Textura2 uv2, uint32_t* textura, int texturaAncho, int texturaAlto)
+{
+    if(y0 > y1){
+        IntercambioInt(&y0, &y1);
+        IntercambioInt(&x0, &x1);
+        IntercambioFloat(&z0, &z1);
+        IntercambioFloat(&w0, &w1);
+        // IntercambioTexturea(&t0, &t1);
+        IntercambioTexturea(&uv0, &uv1);
+    }
+    if(y1 > y2){
+        IntercambioInt(&y1, &y2);
+        IntercambioInt(&x1, &x2);
+        IntercambioFloat(&z1, &z2);
+        IntercambioFloat(&w1, &w2);
+        // IntercambioTexturea(&t1, &t2);
+        IntercambioTexturea(&uv1, &uv2);
+    }
+    if(y0 > y1){
+        IntercambioInt(&y0, &y1);
+        IntercambioInt(&x0, &x1);
+        IntercambioFloat(&z0, &z1);
+        IntercambioFloat(&w0, &w1);
+        // IntercambioTexturea(&t0, &t1);
+        IntercambioTexturea(&uv0, &uv1);
+    }
+
+    uv0.v = 1 - uv0.v;
+    uv1.v = 1 - uv1.v;
+    uv2.v = 1 - uv2.v;
+    // Vector2 pA{static_cast<double>(x0), static_cast<double>(y0)};
+    // Vector2 pB{static_cast<double>(x1), static_cast<double>(y1)};
+    // Vector2 pC{static_cast<double>(x2), static_cast<double>(y2)};
+    Vector4 pA{(double)x0, (double)y0, (double)z0, (double)w0};
+    Vector4 pB{(double)x1, (double)y1, (double)z1, (double)w1};
+    Vector4 pC{(double)x2, (double)y2, (double)z2, (double)w2};
+
+    float uDivW[3] = {(float)uv0.u / (float)pA.w, (float)uv1.u / (float)pB.w, (float)uv2.u / (float)pC.w};
+    float vDivW[3] = {(float)uv0.v / (float)pA.w, (float)uv1.v / (float)pB.w, (float)uv2.v / (float)pC.w};
+    float oneDviW[3] = {1 / (float)pA.w, 1 / (float)pB.w, 1 / (float)pC.w};
+
+    {
+        float m1 = 0;
+        float m2 = 0;
+
+        if (y1 - y0 != 0) m1 = -((y1 - y0) / static_cast<float>((x0 - x1)));
+        if (y2 - y0 != 0) m2 = (y2 - y0) / static_cast<float>((x2 - x0));
+        if (y1 - y0 != 0){
+            for(int i = 0; i  < (y1 - y0); i++){
+                int xInicio = x0 + (i / m1);
+                int xFin = x0 + (i / m2);
+                int y = y0 + i;
+
+                if(xFin < xInicio) IntercambioInt(&xFin, &xInicio);
+
+                for(int x = xInicio; x < xFin; x++){
+                    // dibujarPixel(x, y, (x % 2 == 0) ? 0xFFFFF00FF : 0xFF000000);
+                    // DibujarTexel(x, y, pA, pB, pC, uv0, uv1, uv2, textura, this);
+                    DibujarTexel(x, y, pA, pB, pC, uv0, uv1, uv2, uDivW, vDivW, oneDviW, textura, texturaAncho, texturaAlto);
+                }
+            }
+        }
+    }
+    
+    {
+        float m1 = 0;
+        float m2 = 0;
+
+        if(y2 - y1 != 0) m1 = -((y2 - y1) / static_cast<float>((x2 - x1)));
+        if(y2 - y0 != 0) m2 = -((y2 - y0) / static_cast<float>((x2 - x0)));
+        if(y2 - y1 != 0){
+            for(int i = 0; i <= (y2 - y1); i++){
+                int xInicio = x2 + (i / m1);
+                int xFin = x2 + (i / m2);
+                int y = y2 - i;
+
+                if(xFin < xInicio) IntercambioInt(&xFin, &xInicio);
+
+                for(int x = xInicio; x < xFin; x++){
+                    // dibujarPixel(x, y, (x % 2 == 0) ? 0xFFFFF00FF : 0xFF000000);
+                    // DibujarTexel(x, y, pA, pB, pC, uv0, uv1, uv2, textura, this);
+                    DibujarTexel(x, y, pA, pB, pC, uv0, uv1, uv2, uDivW, vDivW, oneDviW, textura, texturaAncho, texturaAlto);
+                }
+            }
+        }
+    }
+}
+
+void Motor::DibujarTexel(int x, int y, Vector4 a, Vector4 b, Vector4 c, Textura2 t0, Textura2 t1, Textura2 t2, float* uDivW, float* vDivW, float* oneDivw, uint32_t *texture, int texturaAncho, int texturaAlto)
+{
+    Vector2 p{static_cast<double>(x), static_cast<double>(y)};
+    Vector3 peso = Vector3::PesoBaricentrico(a.ToVector2(), b.ToVector2(), c.ToVector2(), p);
+    float alfa = peso.x;
+    float beta = peso.y;
+    float gamma = peso.z;
+
+    // float interpolacionU = (t0.u / a.w) * alfa + (t1.u / b.w) * beta + (t2.u / c.w) * gamma;
+    // float interpolacionV = (t0.v / a.w) * alfa + (t1.v / b.w) * beta + (t2.v / c.w) * gamma;
+    // float interpolacionRecW = (1 / a.w) * alfa + (1 / b.w) * beta + (1 / c.w) * gamma;
+
+    float interpolacionU = uDivW[0] * alfa + uDivW[1] * beta + uDivW[2] * gamma;
+    float interpolacionV = vDivW[0] * alfa + vDivW[1] * beta + vDivW[2] * gamma;
+    float interpolacionRecW = oneDivw[0] * alfa + oneDivw[1] * beta + oneDivw[2] * gamma;
+
+    interpolacionU /= interpolacionRecW;
+    interpolacionV /= interpolacionRecW;
+
+    // int texelX = abs(static_cast<int>(interpolacionU * motor->texturaAncho));
+    // int texelY = abs(static_cast<int>(interpolacionV * motor->texturaAlto));
+
+    int texelX = abs(static_cast<int>(interpolacionU * texturaAncho));
+    int texelY = abs(static_cast<int>(interpolacionV * texturaAlto));
+
+    // dibujarPixel(x, y, texture[(motor->texturaAncho * texelY) + texelX]);
+    dibujarPixel(x, y, texture[(texturaAncho * texelY) + texelX]);
+}
+
 void Motor::IntercambioInt(int* a, int* b)
 {
     int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void Motor::IntercambioFloat(float* a, float* b)
+{
+    float temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void Motor::IntercambioTexturea(Textura2* a, Textura2* b)
+{
+    Textura2 temp = *a;
     *a = *b;
     *b = temp;
 }
@@ -343,9 +478,31 @@ Vector3 rotacion;
 
 void Motor::Configuracion()
 {
+    texturaAlto = 64;
+    texturaAncho = 64;
+
+    // Textura2 mallaTexturaUVs[]{ 
+    //     {0,0},{0,1},{1,1},{0,0},{1,1},{1,0},
+    //     {0,0},{0,1},{1,1},{0,0},{1,1},{1,0},  
+    //     {0,0},{1,1},{1,0},{0,0},{0,1},{1,1},  
+    //     {0,0},{1,1},{1,0},{0,0},{0,1},{1,1},
+    //     {0,0},{1,1},{1,0},{0,0},{0,1},{1,1},
+    //     {0,0},{0,1},{1,1},{0,0},{1,1},{1,0}
+    // };
+
     // malla = Malla(this, vertices, 8, caras, 12);
-    malla = Malla(this, vertices, 8, caras, 12, mallaColor);
+    // malla = Malla(this, vertices, 8, caras, 12, mallaColor, mallaTexturaUVs);
     // malla = Malla(this, "./modelos3D/Esfera.obj");
+    malla = Malla(this, "./modelos3D/Cubo.obj", "./modelos3D/cuboI.png");
+
+    // REDRICK_TEXTURE = new (std::nothrow) uint8_t[16400]{};
+    /*
+    REDRICK_TEXTURE = new (std::nothrow) uint8_t[16400]{
+        0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, // ...
+    };
+    mallaTextura = (uint32_t*)REDRICK_TEXTURE;
+    */
+    colorBufferTextura = SDL_CreateTexture(renderizado, SDL_PIXELFORMAT_RGBA32, SDL_TEXTUREACCESS_STREAMING, ANCHOPANTALLA, ALTOPANTALLA);
 }
 
 void Motor::Actualizar()
